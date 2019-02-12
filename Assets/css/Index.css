@@ -1,0 +1,191 @@
+body {
+    color: #000000;
+    background-color: #F5F5F5;
+}
+
+header {
+    overflow: hidden;
+    border-color: #FCB000;
+    border-style: solid;
+    border-width: thin;
+    width: auto;
+}
+
+.taskbar {
+    margin-top: 100px;
+    float: right;
+    text-align: center;
+}
+
+.Logo {
+    float: left;
+    padding-left: 50px;
+}
+
+.searchbar {
+    padding-left: 15px;
+    font-size: 30px;
+    border-radius: 50px;
+}
+
+.search {
+    font-size: 35px;
+    margin-top: 100px;
+    margin-left: 350px;
+}
+
+.sidebar {
+    overflow: hidden;
+    width: auto;
+    position:  absolute;
+    z-index: 1;
+    top: 270px;
+    left: 50px;
+    background-color: #E7E7E7;
+    padding: 20px;
+    border-color: #FCB000;
+    border-width: thin;
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 20px;
+}
+
+a {
+    color: black;
+}
+
+.block {
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #FCB000;
+}
+
+p {
+    text-align: justify;
+}
+
+li {
+    border-color: #FCB000;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 10px;
+    border-width: thin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.button {
+    font-weight: bold;
+    margin-left: 620px;
+    width: 15%;
+    border-color: #FCF000;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-width: thin;
+    background-color: #FCB000;
+}
+
+.icon {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    overflow: auto;
+}
+
+.popup_interior {
+    border: 1px solid #888;
+    left: 200px;
+    position: absolute;
+    background-color: #F5F5F5;
+    margin: 20% auto;
+    width: 80%;
+}
+
+.sizebis {
+    top: 20;
+	height: 400px;
+	width: 725px;
+	margin-left: 500px;
+}
+
+.block {
+	width: 40%;
+	margin: auto;
+    margin-left: 450px;
+	margin-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 20px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #FCB000;
+}
+
+p {
+	text-align: justify;
+}
+
+.question {
+	border-color: #FCB000;
+	border-radius: 10px;
+	border-style: solid;
+	padding: 10px;
+	border-width: thin;
+	margin-top: 50px;
+}
+
+.button {
+	font-weight: bold;
+	margin-left: 620px;
+	width: 15%;
+	border-color: #FCF000;
+	border-radius: 10px;
+	border-style: solid;
+	padding: 10px;
+	margin-bottom: 30px;
+	border-width: thin;
+	background-color: #FCB000;
+}
+
+.icon {
+	font-size: 70px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+}
+
+.in_modal {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}

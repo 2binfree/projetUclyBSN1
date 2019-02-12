@@ -1,0 +1,137 @@
+body {
+	color: #000000;
+	background-color: #F5F5F5;
+}
+
+header {
+	overflow: hidden;
+	border-color: #FCB000;
+	border-style: solid;
+	border-width: thin;
+	width: auto;
+}
+
+.taskbar {
+    margin-top: 100px;
+    float: right;
+    text-align: center;
+}
+
+.Logo {
+    float: left;
+    padding-left: 50px;
+}
+
+.sidebar {
+	overflow: hidden;
+	width: auto;
+	position: absolute;
+	z-index: 1;
+	top: 280px;
+	left: 30px;
+	background-color: #E7E7E7;
+	padding-top: 20px;
+	border-color: #FCB000;
+	border-width: thin;
+	border-radius: 10px;
+	border-style: solid;
+}
+
+a {
+	margin: 20px;
+	color: black;
+}
+
+.block {
+	width: 40%;
+	margin: auto;
+	margin-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 20px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #FCB000;
+}
+
+p {
+	text-align: justify;
+}
+
+.question {
+	border-color: #FCB000;
+	border-radius: 10px;
+	border-style: solid;
+	padding: 10px;
+	border-width: thin;
+	margin-top: 50px;
+}
+
+.button {
+	font-weight: bold;
+	margin-left: 620px;
+	width: 15%;
+	border-color: #FCF000;
+	border-radius: 10px;
+	border-style: solid;
+	padding: 10px;
+	margin-bottom: 30px;
+	border-width: thin;
+	background-color: #FCB000;
+}
+
+.icon {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.textinput {
+	margin-left: 500px;
+	text-align: left;
+}
+
+.text {
+	font-size: 40px;
+	text-align: center;
+	Font-Weight: Bold;
+	margin-bottom: 10px;
+	margin-top: 1px;
+}
+
+.gauche {
+	float: right;
+	text-align: center;
+	margin-right: 525px;
+	padding-top: 10px;
+	margin-top: 30px
+
+}
+
+.droite {
+	float: right;
+	text-align: center;
+	margin-right: 525px;
+	padding-top: 10px;
+}
+
+.scroll {
+	overflow-y: scroll;
+	white-space: nowrap;
+	background-color: #FCB000;
+	height: 150px;
+	width: 300px;
+	margin-left: 530px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: left;
+	margin-top: 20px;
+	border-color: #FCF000;
+	border-radius: 10px;
+	border-style: solid;
+}
+
+.sizebis {
+	height: 400px;
+	width: 725px;
+	margin-left: 500px;
+}

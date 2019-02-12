@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Universalitis</title>
+	<link rel="stylesheet" href="Assets/css/forms.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+	<header>
+		<a href="Index.html" class="Logo"><img src="assets/Img/logo.png" alt="Logo"></a>
+		<div class="taskbar">
+			<a href="#"><i class="fas fa-user-circle icon"></i></a>
+			<a href="#"><i class="fas fa-bell icon"></i></a>
+			<a href="#"><i class="fas fa-home icon"></i></a>
+		</div>
+	</header>
+	<div class="block">
+		<p class="text">Saisir votre question</p>
+	</div>
+    <form class="" action="Index.html" method="post">
+        <input Type="textarea" placeholder="Ecrivez votre question ici" id="myid" class="block sizebis"></input>
+        <input value="Envoyer" class="button gauche" id="Confirm" type="submit"></input>
+        <input type="button" onclick="window.location.href = 'Index.html'" value="Annuler" class="button droite" id="Cancel" type="reset"></input>
+        <div class="scroll">
+            <h2>Choisir mots-clés :</h2>
+            <input type="radio" id="Finance" name="mots-clés" value="Finance">
+            <label for="Finance">Finance</label><br>
+            <input type="radio" id="Culture" name="mots-clés" value="Culture">
+            <label for="Culture">Culture</label><br>
+            <input type="radio" id="Divertissements" name="mots-clés" value="Divertissements">
+            <label for="Divertissements">Divertissements</label><br>
+            <input type="radio" id="Santé" name="mots-clés" value="Santé">
+            <label for="Santé">Santé</label><br>
+            <input type="radio" id="Sport" name="mots-clés" value="Sport">
+            <label for="Sport">Sport</label><br>
+            <input type="radio" id="Sciences" name="mots-clés" value="Sciences">
+            <label for="Sciences">Sciences</label><br>
+            <input type="radio" id="Technologies" name="mots-clés" value="Technologies">
+            <label for="Technologies">Technologies</label><br>
+            <input type="radio" id="Mode" name="mots-clés" value="Mode">
+            <label for="Mode">Mode</label><br>
+            <input type="radio" id="Cuisine" name="mots-clés" value="Cuisine">
+            <label for="Cuisine">Cuisine</label><br>
+            <input type="radio" id="Bricolage" name="mots-clés" value="Bricolage">
+            <label for="Bricolage">Bricolage</label><br>
+            <input type="radio" id="Voyage" name="mots-clés" value="Voyage">
+            <label for="Voyage">Voyage</label><br>
+        </form>
+        <script src="Assets/JS/Index.js"></script>
+</body>
+</html>
