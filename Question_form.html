@@ -21,9 +21,9 @@
 		<p class="text">Saisir votre question</p>
 	</div>
     <form class="" action="Index.html" method="post">
-        <input Type="textarea" placeholder="Ecrivez votre question ici" id="myid" class="block sizebis"></input>
-        <input value="Envoyer" class="button gauche" id="Confirm" type="submit"></input>
-        <input type="button" onclick="window.location.href = 'Index.html'" value="Annuler" class="button droite" id="Cancel" type="reset"></input>
+        <input type="text" placeholder="Ecrivez votre question ici" id="myid" class="block sizebis">
+        <input type="submit" value="Envoyer" class="button gauche" name="submit">
+        <input type="button" onclick="window.location.href = 'Index.html'" value="Annuler" class="button droite" id="Cancel">
         <div class="scroll">
             <h2>Choisir mots-clés :</h2>
             <input type="radio" id="Finance" name="mots-clés" value="Finance">
@@ -48,7 +48,8 @@
             <label for="Bricolage">Bricolage</label><br>
             <input type="radio" id="Voyage" name="mots-clés" value="Voyage">
             <label for="Voyage">Voyage</label><br>
-        </form>
+        </div>
+    </form>
         <script src="Assets/JS/Index.js"></script>
 </body>
 </html>
