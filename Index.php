@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php require_once 'functions.php';
+
 <html lang="fr" dir="ltr">
 
 <head>
@@ -11,7 +13,7 @@
 
 <body>
     <header>
-        <a href="Index.html" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
+        <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
         <div class="taskbar">
             <i class="fas fa-search search fa-lg"><input type="text" id="myInput" onkeyup="Search()" placeholder="Recherchez" class="searchbar"></i>
             <a href="#"><i class="fas fa-user fa-2x icon"></i></a>
@@ -33,8 +35,21 @@
         <a href="#"><img src="" alt="Voyage"></a><br><br>
     </div>
     <div class="block">
-        <h1>Ajoutez votre question</h1><br>
-        <a class="button" href="Question_form.html" style="font-size: 18px">Poser ma question</a>
+        <?php
+$questions = [
+    "Comment allez-vous ?",
+    "OL a-t-il perdu contre le Barça ?",
+    "Pourquoi e=mc² ?",
+    "Hello tout le monde ! Voulez-vous avoir des news sur Brad Pitt ?"
+];
+
+foreach ($questions as $key => $value){
+    echo $key + 1;
+}
+?>
+        <h1>Ajoutez votre question
+            <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
+        </h1>
     </div>
     <div class="modal" id="modal">
         <div class="in_modal" id="answer_list">
