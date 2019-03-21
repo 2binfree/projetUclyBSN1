@@ -13,7 +13,8 @@
 
 <body>
     <header>
-        <a href="Index.html" class="Logo"><img src="Assets/Images/logo.png" alt="Logo"></a>
+
+        <a href="Index.php" class="Logo"><img src="Assets/Images/logo.png" alt="Logo"></a>
         <div class="taskbar">
             <a href="#"><i class="fas fa-user-circle icon"></i></a>
             <a href="#"><i class="fas fa-bell icon"></i></a>
@@ -35,6 +36,18 @@
         <a href="#"><img src="" alt="Voyage"></a><br><br>
     </div>
     <div class="block">
+        <?php
+$questions = [
+    "Comment allez-vous ?",
+    "OL a-t-il perdu contre le Barça ?",
+    "Pourquoi e=mc² ?",
+    "Hello tout le monde ! Voulez-vous avoir des news sur Brad Pitt ?"
+];
+
+foreach ($questions as $key => $value){
+    echo $key + 1;
+}
+?>
         <h1>Ajouter votre question
             <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
         </h1>
