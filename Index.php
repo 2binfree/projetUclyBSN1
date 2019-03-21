@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php require_once 'testarray.php';
+<?php require_once 'functions.php';
 
 <html lang="fr" dir="ltr">
 
