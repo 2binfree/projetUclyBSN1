@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php require_once 'testarray.php';
 
 <html lang="fr" dir="ltr">
 
@@ -12,6 +13,7 @@
 
 <body>
     <header>
+
         <a href="Index.php" class="Logo"><img src="Assets/Images/logo.png" alt="Logo"></a>
         <div class="taskbar">
             <a href="#"><i class="fas fa-user-circle icon"></i></a>
