@@ -14,6 +14,7 @@ function setup() {
 
 /**
 * regirster any updates to a given question in the questionList array
+* @param array $question
 * @return bool
 */
 function saveQuestion(array $question) {
@@ -27,6 +28,7 @@ function saveQuestion(array $question) {
 
 /**
 * checks if the category given by a $_POST is in the categories array
+* @param array $data
 * @return bool
 */
 function checkCategory($data):bool {
@@ -39,6 +41,7 @@ function checkCategory($data):bool {
 
 /**
 * extract data from post and puts it into a new array that will be added to the question list
+* @param array $data
 * @return array
 */
 function createQuestion(array $data):array {
@@ -79,6 +82,8 @@ function checkCategories() {
 
 /**
 * add an answer to the $answers array in the $question array
+* @param array $question
+* @param array $answer
 * @return array
 */
 function addAnswer(array $question, array $answer):array {
@@ -88,6 +93,7 @@ function addAnswer(array $question, array $answer):array {
 
 /**
 * creates an anwser that will be added to a question through an addAnswer() call
+* @param array $data
 * @return array
 */
 function createAnswer($data):array
