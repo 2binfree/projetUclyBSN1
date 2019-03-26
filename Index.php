@@ -2,7 +2,6 @@
 <?php require_once 'functions.php';
 ?>
 <?php require_once 'fakeData.php';
-
 ?>
 <html lang="fr" dir="ltr">
 
@@ -16,14 +15,13 @@
 
 <body>
     <header>
-
-        <a href="Index.php" class="Logo"><img src="Assets/Images/logo.png" alt="Logo"></a>
+        <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
         <div class="taskbar">
-            <a href="#"><i class="fas fa-user-circle icon"></i></a>
-            <a href="#"><i class="fas fa-bell icon"></i></a>
-            <a href="#"><i class="fas fa-home icon"></i></a>
+            <i class="fas fa-search search fa-lg"><input type="text" id="myInput" onkeyup="Search()" placeholder="Recherchez" class="searchbar"></i>
+            <a href="#"><i class="fas fa-user fa-2x icon"></i></a>
+            <a href="#"><i class="fas fa-bell fa-2x icon"></i></a>
+            <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
         </div>
-        <i class="fas fa-search search"><input type="text" id="myInput" onkeyup="Search()" placeholder="Chercher un tag" class="searchbar"></i>
     </header>
     <div class="sidebar">
         <a href="#"><img src="" alt="Finance"></a><br><br>
@@ -72,7 +70,7 @@
     <p>Le nombre de questions posées est : <?php echo $key;?></p>
 </ul>
 <script src="Assets/JS/Index.js"></script>
-
+  
 </body>
 
 </html>
