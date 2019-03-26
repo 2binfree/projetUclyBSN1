@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <?php require_once 'functions.php';
-
+?>
+//ligne de test, utilisation de fausses questions
+<?php require_once 'fakeData.php';
+?>
 <html lang="fr" dir="ltr">
 
 <head>
@@ -35,30 +38,41 @@
         <a href="#"><img src="" alt="Voyage"></a><br><br>
     </div>
     <div class="block">
-        <?php
-$questions = [
-    "Comment allez-vous ?",
-    "OL a-t-il perdu contre le Barça ?",
-    "Pourquoi e=mc² ?",
-    "Hello tout le monde ! Voulez-vous avoir des news sur Brad Pitt ?"
-];
+        </div>
+<h1>Ajouter votre question
+    <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
+</h1>
 
-foreach ($questions as $key => $value){
-    echo $key + 1;
+<div class="modal" id="modal">
+    <div class="in_modal" id="answer_list">
+    </div>
+</div>
+<ul class="block" id="list">
+     <?php
+        
+    foreach ($listeQuestions as $key => $value){
+        $key = $key + 1;
 }
 ?>
-        <h1>Ajoutez votre question
-            <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
-        </h1>
-    </div>
-    <div class="modal" id="modal">
-        <div class="in_modal" id="answer_list">
-        </div>
-    </div>
-    <ul class="block" id="list">
-        <li>test</li>
-    </ul>
-    <script src="Assets/JS/Index.js"></script>
+        <table>
+            <?php Foreach($listeQuestions as $listeQuestion):?>
+                <tr>
+                    <td>
+                         <li>
+                        <?php   
+                            echo "<pre>";
+                            print_r($listeQuestion);
+                            echo "</pre>";?>
+                        </li>     
+                    </td>
+                </tr>
+            <?php endForeach ?>
+        </table>
+//Ligne de test, brouillon d'affichage du nombre de questions 
+    <p>Le nombre de questions posées est : <?php echo $key;?></p>
+</ul>
+<script src="Assets/JS/Index.js"></script>
+  
 </body>
 
 </html>
