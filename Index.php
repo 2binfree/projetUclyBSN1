@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php require_once 'functions.php';
 ?>
+//ligne de test, utilisation de fausses questions
 <?php require_once 'fakeData.php';
 ?>
 <html lang="fr" dir="ltr">
@@ -67,6 +68,7 @@
                 </tr>
             <?php endForeach ?>
         </table>
+//Ligne de test, brouillon d'affichage du nombre de questions 
     <p>Le nombre de questions posées est : <?php echo $key;?></p>
 </ul>
 <script src="Assets/JS/Index.js"></script>
