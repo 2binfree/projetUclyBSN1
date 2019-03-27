@@ -59,16 +59,14 @@
                 <tr>
                     <td>
                          <li>
-                        <?php   
-                            echo "<pre>";
-                            print_r($listeQuestion);
-                            echo "</pre>";?>
-                        </li>     
+                        <?php echo $listeQuestion; ?>
+                        </li>
+                        <p>Le nombre de caractère de la question est : <?php echo strlen($value);?></p>
                     </td>
                 </tr>
             <?php endForeach ?>
         </table>
-//Ligne de test, brouillon d'affichage du nombre de questions 
+<!--Ligne de test, brouillon d'affichage du nombre de questions--> 
     <p>Le nombre de questions posées est : <?php echo $key;?></p>
 </ul>
 <script src="Assets/JS/Index.js"></script>
