@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php require_once 'functions.php';
+<?php require_once 'functions.php'?>
 
 <html lang="fr" dir="ltr">
 
@@ -38,13 +38,13 @@
         <?php
 $questions = [
     "Comment allez-vous ?",
-    "OL a-t-il perdu contre le Barça ?",
+    "L'OL a-t-il perdu contre le Barça ?",
     "Pourquoi e=mc² ?",
     "Hello tout le monde ! Voulez-vous avoir des news sur Brad Pitt ?"
 ];
 
 foreach ($questions as $key => $value){
-    echo $key + 1;
+    echo "on est là, ";
 }
 ?>
         <h1>Ajoutez votre question
@@ -56,7 +56,7 @@ foreach ($questions as $key => $value){
         </div>
     </div>
     <ul class="block" id="list">
-        <li>test</li>
+        <li><?php echo "IS GOES THE THING SKRRRAHH PAP PAP KA KA KA ?" ?></li>
     </ul>
     <script src="Assets/JS/Index.js"></script>
 </body>
