@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<?php require_once 'functions.php';
-?>
-//ligne de test, utilisation de fausses questions
-<?php require_once 'fakeData.php';
-?>
+
+<?php require_once 'functions.php' ?>
+
+<?php require_once 'fakeData.php' ?>
+
 <html lang="fr" dir="ltr">
 
 <head>
@@ -72,7 +72,6 @@
     <p>Le nombre de questions posées est : <?php echo $key;?></p>
 </ul>
 <script src="Assets/JS/Index.js"></script>
-  
 </body>
 
 </html>

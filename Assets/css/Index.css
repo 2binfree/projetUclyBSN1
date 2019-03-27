@@ -8,7 +8,7 @@ header {
     border-color: #FCB000;
     border-style: solid;
     border-radius: 10px;
-    background-color: #F5F5F5
+    background-color: #F5F5F5;
 }
 
 .taskbar {
@@ -54,7 +54,7 @@ a {
 }
 
 .block {
-    width: 50%;
+    width: 60%;
     margin-left: 23%;
 	margin-top: 50px;
     margin-right: 25%;
