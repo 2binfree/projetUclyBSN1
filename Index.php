@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <?php require_once 'functions.php';
+setup();
+var_dump($_SESSION['questionList']);
+ ?>
 
 <html lang="fr" dir="ltr">
 
@@ -49,7 +52,7 @@ foreach ($questions as $key => $value){
 }
 ?>
         <h1>Ajouter votre question
-            <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
+            <a class="button" href="Question_form.php" style="font-size: 18px">Question?</a>
         </h1>
     </div>
     <div class="modal" id="modal">
