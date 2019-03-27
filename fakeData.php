@@ -2,39 +2,62 @@
 
 setup();
 
-$question = [
-    'category'=>"sport",
-    'question'=>"Qui a vu Lionel Messi faire danser Denayer et Marcelo ?",
+$questions = [
+    [
+        'category' => "sport",
+        'question' => "Qui a vu Lionel Messi faire danser Denayer et Marcelo ?",
+    ],
+    [
+        'category' => "sante",
+        'question' => "Pour ou contre les vaccins ?",
+    ],
+    [
+        'category' => "cuisine",
+        'question' => "Qui veut un grec ?",
+    ], 
+    [
+        'category' => "cuisine",
+        'question' => "La recette de la tarte aux myrtilles ?",
+    ],
 ];
 
-$newQuestion = createQuestion($question);
-saveQuestion($newQuestion);
-$verif = checkCategory($newQuestion);
-
-$questions2 = [
-    'category'=>"sante",
-    'question'=>"Pour ou contre les vaccins ?",
+$categories = [
+    [
+        'category' => "sport",
+        'question' => "Qui a vu Lionel Messi faire danser Denayer et Marcelo ?",
+    ],
+    [
+        'category' => "sante",
+        'question' => "Pour ou contre les vaccins ?",
+    ],
+    [
+        'category' => "cuisine",
+        'question' => "Qui veut un grec ?",
+    ], 
+    [
+        'category' => "cuisine",
+        'question' => "La recette de la tarte aux myrtilles ?",
+    ],
 ];
 
-$newQuestion2 = createQuestion($questions2);
-saveQuestion($newQuestion2);
-$verif2 = checkCategory($newQuestion2);
 
-$questions3 = [
-    'category'=>"cuisine",
-    'question'=>"Qui veut un grec ?",
-];
-
-$newQuestion3 = createQuestion($questions3);
-saveQuestion($newQuestion3);
-$verif3 = checkCategory($newQuestion3);
-
-//var_dump($newQuestion);
+foreach ($questions as $question){
+    
+    $newQuestion = createQuestion($question);
+    $verif = checkCategory($newQuestion);
+    saveQuestion($newQuestion);
+    $key = $key + 1;
+}
 
 $listeQuestions=[
     $newQuestion[question],
-    $newQuestion2[question],
-    $newQuestion3[question],
-]
+];
 
+$listeCategories=[
+    $newQuestion[category],
+];
+
+
+//var_dump($newQuestion);
+session_destroy();
 ?>
