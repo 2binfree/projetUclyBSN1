@@ -1,8 +1,8 @@
 <!DOCTYPE html>
+<?php require_once 'functions.php';
+setup();
+require_once 'fakeData.php'; ?>
 
-<?php require_once 'functions.php' ?>
-
-<?php require_once 'fakeData.php' ?>
 
 <html lang="fr" dir="ltr">
 
@@ -54,6 +54,10 @@
         $key = $key + 1;
 }
 ?>
+        <h1>Ajouter votre question
+            <a class="button" href="Question_form.php" style="font-size: 18px">Question?</a>
+        </h1>
+    </div>
         <table>
             <?php Foreach($listeQuestions as $listeQuestion):?>
                 <tr>
