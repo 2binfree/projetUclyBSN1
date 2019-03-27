@@ -13,7 +13,7 @@ function setup() {
 }
 
 /**
-* regirster any updates to a given question in the questionList array
+* register any updates to a given question in the questionList array
 * @param array $question
 * @return int
 */
