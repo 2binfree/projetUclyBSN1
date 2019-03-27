@@ -3,9 +3,6 @@
 setup();
 $mode = "";
 if (!empty($_POST) && $_POST['formType'] == "question") {
-    $mode  = "addQuestion";
-}
-if ($mode == 'addQuestion') {
     $result = createQuestion($_POST);
     if (saveQuestion($result) != 0) {
         echo $_POST;
