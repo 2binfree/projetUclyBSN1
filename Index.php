@@ -42,7 +42,7 @@
     
     <div class="block">
 <h1>Ajouter votre question
-    <a class="button" href="Question_form.php" style="font-size: 18px">Question?</a>
+    <a class="button" href="Question_form.php">Question?</a>
 </h1>
     </div>
 
@@ -57,10 +57,10 @@
                     <td>
                         <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);?></em></p> 
                          <li>
-                        <?php if (strlen($listeQuestion) > 165) {
-                                echo substr($listeQuestion, 0, 165)."..."; 
+                        <?php if (strlen($listeQuestion["question"]) > 165) {
+                                echo substr($listeQuestion["question"], 0, 165)."..."; 
                             } else {
-                                echo $listeQuestion;
+                                echo ($listeQuestion["question"]);
 }?>
                         </li>
                     </td>
