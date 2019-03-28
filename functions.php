@@ -110,12 +110,14 @@ function createAnswer($data):array
     return $newValue;
 }
 
-function sortQuestion($_SESSION['questionList'])
+function sortQuestion()
 {
-    foreach($question as $k => $v){
-        $d[$k] = $v['date'];
+    $questionList=$_SESSION["questionList"];
+    $result=[];
+    foreach($questionList as $question){
+        $result[$question["time"]]=$question;
     }
-    array_multisort($d, SORT_DESC , $question);
-    return $value;
+    krsort($result);
+    return $result;
 }
  ?>

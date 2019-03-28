@@ -3,11 +3,10 @@
     require_once 'functions.php';
     setup();        
     require_once 'fakeData.php';      
-    $listeQuestions = $_SESSION["questionList"];    
-    $categories = $_SESSION["categories"];  
+    $listeQuestions = sortQuestion();  
+    $categories = $_SESSION["categories"]; 
 ?>
 <html lang="fr" dir="ltr">
-
 <head>
     <meta charset="utf-8">
     <title>Universalitis</title>
@@ -51,7 +50,8 @@
 </div>
 <ul class="block" id="list">
         <table>
-            <?php Foreach($listeQuestions as $listeQuestion):?>
+            <?php 
+            foreach($listeQuestions as $listeQuestion):?>
                 <tr>
                     <td>
                         <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);?></em></p> 

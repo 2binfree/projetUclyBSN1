@@ -24,6 +24,7 @@ $questions = [
 foreach ($questions as $question){
     
     $newQuestion = createQuestion($question);
+    $newQuestion["time"] = rand(10000, 1000000);
     $verif = checkCategory($newQuestion);
     saveQuestion($newQuestion);
 }
