@@ -64,7 +64,6 @@
                 </tr>
             <?php endForeach ?>
         </table>
-    <p>Le nombre de questions posées est : <?php echo $key;?></p>
 </ul>
 <script src="Assets/JS/Index.js"></script>
 </body>
