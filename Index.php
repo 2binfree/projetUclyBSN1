@@ -40,21 +40,23 @@
     </div>
     
     <div class="block">
-<h1>Ajouter votre question
-    <a class="button" href="Question_form.php">Question?</a>
-</h1>
+      <h1>Ajouter votre question
+        <a class="button" href="Question_form.php">Question?</a>
+      </h1>
     </div>
-
-    <div>
-        <ul class="block" id="list">
-            <?php foreach ($listeQuestions as $key => $value){
-                $key = $key + 1;
-}?>
+<ul class="block" id="list">
+    <?php $keys = 0;?>
+        <table>
+            <?php Foreach($listeQuestions as $listeQuestion):
+                  $keys = $keys + 1;        
+            ?>
         <table>
             <?php foreach($listeQuestions as $listeQuestion):?>
                 <tr>
                     <td>
-                        <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);?></em></p> 
+                        <p><em>n°<?php echo $keys ?></em></p>
+                        <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);
+                                ?></em></p> 
                          <li>
                         <?php if (strlen($listeQuestion["question"]) > 165) {
                                 echo substr($listeQuestion["question"], 0, 165)."..."; 
