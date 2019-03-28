@@ -47,16 +47,12 @@ if (!empty($_POST['category'])) {
             <input type="submit" name="category" value="voyage"></br>
         </form>
     </div>
+    
     <div class="block">
     </div>
     <h1>Ajouter votre question
         <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
     </h1>
-
-    <div class="modal" id="modal">
-        <div class="in_modal" id="answer_list">
-        </div>
-    </div>
     <ul class="block" id="list">
         <table>
             <?php
@@ -68,9 +64,11 @@ if (!empty($_POST['category'])) {
                             echo ($categories[$listeQuestion["categoryKey"]]);
                             ?></em></p>
                             <li>
-                                <?php
+                        <?php if (strlen($listeQuestion["question"]) > 165) {
+                                echo substr($listeQuestion["question"], 0, 165)."..."; 
+                            } else {
                                 echo ($listeQuestion["question"]);
-                            ?>
+                        }?>
                             </li>
                         </td>
                     </tr>
@@ -79,5 +77,6 @@ if (!empty($_POST['category'])) {
         </table>
     </ul>
     <script src="Assets/JS/Index.js"></script>
+
 </body>
 </html>

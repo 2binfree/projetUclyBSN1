@@ -132,6 +132,7 @@ p {
 }
 
 .button {
+    font-size: 18px;
 	font-weight: bold;
 	margin-left: 80%;
 	border-style: solid;
