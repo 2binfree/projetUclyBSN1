@@ -40,7 +40,7 @@ require_once 'fakeData.php'; ?>
     
     <div class="block">
 <h1>Ajouter votre question
-    <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
+    <a class="button" href="Question_form.php" style="font-size: 18px">Question?</a>
 </h1>
     </div>
 
