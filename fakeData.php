@@ -4,7 +4,7 @@ setup();
 
 $question = [
     'category'=>"sport",
-    'question'=>"Qui a vu Lionel Messi faire danser Denayer et Marcelo ?",
+    'question'=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec egestas nunc, ultrices scelerisque dolor. In risus turpis, faucibus ut purus a, ullamcorper viverra mauris. Cras ultricies mauris id diam dapibus, eget iaculis nibh lobortis. Nam auctor id metus molestie volutpat. Vivamus commodo, ex id fringilla pulvinar, eros est tempus arcu, facilisis tempus velit nulla eu elit. Pellentesque id condimentum libero, id tincidunt nullam ?",
 ];
 
 $newQuestion = createQuestion($question);

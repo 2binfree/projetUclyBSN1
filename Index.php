@@ -37,42 +37,35 @@ require_once 'fakeData.php'; ?>
         <a href="#"><img src="" alt="Bricolage"></a><br><br>
         <a href="#"><img src="" alt="Voyage"></a><br><br>
     </div>
+    
     <div class="block">
-        </div>
 <h1>Ajouter votre question
     <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
 </h1>
+    </div>
 
-<div class="modal" id="modal">
-    <div class="in_modal" id="answer_list">
-    </div>
-</div>
-<ul class="block" id="list">
-     <?php
-        
-    foreach ($listeQuestions as $key => $value){
-        $key = $key + 1;
-}
-?>
-        <h1>Ajouter votre question
-            <a class="button" href="Question_form.php" style="font-size: 18px">Question?</a>
-        </h1>
-    </div>
+    <div>
+        <ul class="block" id="list">
+            <?php foreach ($listeQuestions as $key => $value){
+                $key = $key + 1;
+}?>
         <table>
-            <?php Foreach($listeQuestions as $listeQuestion):?>
+            <?php foreach($listeQuestions as $listeQuestion):?>
                 <tr>
                     <td>
                          <li>
-                        <?php echo $listeQuestion; ?>
+                        <?php if (strlen($listeQuestion) > 165) {
+                                echo substr($listeQuestion, 0, 165)."..."; 
+                            } else {
+                                echo $listeQuestion;
+}?>
                         </li>
-                        <p>Le nombre de caractère de la question est : <?php echo strlen($value);?></p>
                     </td>
                 </tr>
-            <?php endForeach ?>
+            <?php endforeach ?>
         </table>
-<!--Ligne de test, brouillon d'affichage du nombre de questions--> 
-    <p>Le nombre de questions posées est : <?php echo $key;?></p>
 </ul>
+    </div>
 <script src="Assets/JS/Index.js"></script>
 </body>
 
