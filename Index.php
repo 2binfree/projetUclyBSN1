@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<?php 
-    require_once 'functions.php';
-    setup();        
-    require_once 'fakeData.php';      
-    $listeQuestions = $_SESSION["questionList"];    
-    $categories = $_SESSION["categories"];  
+<?php
+require_once 'functions.php';
+setup();
+require_once 'fakeData.php';
+$listeQuestions = $_SESSION["questionList"];
+$categories = $_SESSION["categories"];
+$mode = "";
+if (!empty($_POST['category'])) {
+    if (isset($categories[md5($_POST['category'])])) {
+        $mode = md5($_POST['category']);
+    }
+}
+var_dump($_POST);
 ?>
 <html lang="fr" dir="ltr">
 
@@ -27,44 +34,51 @@
         </div>
     </header>
     <div class="sidebar">
-        <a href="#"><img src="" alt="Finance"></a><br><br>
-        <a href="#"><img src="" alt="Culture"></a><br><br>
-        <a href="#"><img src="" alt="Divertissement"></a><br><br>
-        <a href="#"><img src="" alt="Santé"></a><br><br>
-        <a href="#"><img src="" alt="Sport"></a><br><br>
-        <a href="#"><img src="" alt="Sciences"></a><br><br>
-        <a href="#"><img src="" alt="Technologies"></a><br><br>
-        <a href="#"><img src="" alt="Mode"></a><br><br>
-        <a href="#"><img src="" alt="Cuisine"></a><br><br>
-        <a href="#"><img src="" alt="Bricolage"></a><br><br>
-        <a href="#"><img src="" alt="Voyage"></a><br><br>
+        <form action="Index.php" method="post">
+            <input type="submit" name="category" value="finance"></br>
+            <input type="submit" name="category" value="culture"></br>
+            <input type="submit" name="category" value="divertissement"></br>
+            <input type="submit" name="category" value="sante"></br>
+            <input type="submit" name="category" value="sport"></br>
+            <input type="submit" name="category" value="science"></br>
+            <input type="submit" name="category" value="technologie"></br>
+            <input type="submit" name="category" value="mode"></br>
+            <input type="submit" name="category" value="cuisine"></br>
+            <input type="submit" name="category" value="bricolage"></br>
+            <input type="submit" name="category" value="voyage"></br>
+        </form>
     </div>
     <div class="block">
-        </div>
-<h1>Ajouter votre question
-    <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
-</h1>
-
-<div class="modal" id="modal">
-    <div class="in_modal" id="answer_list">
     </div>
-</div>
-<ul class="block" id="list">
+    <h1>Ajouter votre question
+        <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
+    </h1>
+
+    <div class="modal" id="modal">
+        <div class="in_modal" id="answer_list">
+        </div>
+    </div>
+    <ul class="block" id="list">
         <table>
-            <?php Foreach($listeQuestions as $listeQuestion):?>
+            <?php
+                Foreach($listeQuestions as $listeQuestion):
+                if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
                 <tr>
                     <td>
-                        <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);?></em></p> 
-                         <li>
-                        <?php  
-                            echo ($listeQuestion["question"]);  
-                        ?>
-                        </li>     
-                    </td>
-                </tr>
-            <?php endForeach ?>
+                        <p><em><?php
+                            echo ($categories[$listeQuestion["categoryKey"]]);
+                            ?></em></p>
+                            <li>
+                                <?php
+                                echo ($listeQuestion["question"]);
+                            ?>
+                            </li>
+                        </td>
+                    </tr>
+                <?php endif;
+            endforeach; ?>
         </table>
-</ul>
-<script src="Assets/JS/Index.js"></script>
+    </ul>
+    <script src="Assets/JS/Index.js"></script>
 </body>
 </html>
