@@ -3,7 +3,7 @@
 require_once 'functions.php';
 setup();
 require_once 'fakeData.php';
-$listeQuestions = $_SESSION["questionList"];
+$listeQuestions = sortQuestion();  
 $categories = $_SESSION["categories"];
 $mode = "";
 if (!empty($_POST['category'])) {
@@ -13,7 +13,6 @@ if (!empty($_POST['category'])) {
 }
 ?>
 <html lang="fr" dir="ltr">
-
 <head>
     <meta charset="utf-8">
     <title>Universalitis</title>
