@@ -13,17 +13,20 @@ function setup() {
 }
 
 /**
-* regirster any updates to a given question in the questionList array
+* register any updates to a given question in the questionList array
 * @param array $question
-* @return bool
+* @return int
 */
 function saveQuestion(array $question) {
     $id = md5($question['time'] . $question['question']);
+    if (strlen($question['question']) > 500) {
+        return 1;
+    }
     if (checkCategory($question) === true) {
         $_SESSION['questionList'][$id] = $question;
-        return true;
+        return 0;
     }
-    return false;
+    return 2;
 }
 
 /**
