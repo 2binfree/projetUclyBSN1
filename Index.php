@@ -4,7 +4,7 @@
     setup();        
     require_once 'fakeData.php';      
     $listeQuestions = $_SESSION["questionList"];    
-    $categories = $_SESSION["categories"];  
+    $categories = $_SESSION["categories"];
 ?>
 <html lang="fr" dir="ltr">
 
@@ -50,11 +50,16 @@
     </div>
 </div>
 <ul class="block" id="list">
+    <?php $keys = 0;?>
         <table>
-            <?php Foreach($listeQuestions as $listeQuestion):?>
+            <?php Foreach($listeQuestions as $listeQuestion):
+                  $keys = $keys + 1;        
+            ?>
                 <tr>
                     <td>
-                        <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);?></em></p> 
+                        <p><em>n°<?php echo $keys ?></em></p>
+                        <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);
+                                ?></em></p> 
                          <li>
                         <?php  
                             echo ($listeQuestion["question"]);  
