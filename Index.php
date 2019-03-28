@@ -38,33 +38,36 @@
         <a href="#"><img src="" alt="Bricolage"></a><br><br>
         <a href="#"><img src="" alt="Voyage"></a><br><br>
     </div>
+    
     <div class="block">
-        </div>
 <h1>Ajouter votre question
-    <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
+    <a class="button" href="Question_form.php">Question?</a>
 </h1>
-
-<div class="modal" id="modal">
-    <div class="in_modal" id="answer_list">
     </div>
-</div>
-<ul class="block" id="list">
+
+    <div>
+        <ul class="block" id="list">
+            <?php foreach ($listeQuestions as $key => $value){
+                $key = $key + 1;
+}?>
         <table>
-            <?php 
-            foreach($listeQuestions as $listeQuestion):?>
+            <?php foreach($listeQuestions as $listeQuestion):?>
                 <tr>
                     <td>
                         <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);?></em></p> 
                          <li>
-                        <?php  
-                            echo ($listeQuestion["question"]);  
-                        ?>
-                        </li>     
+                        <?php if (strlen($listeQuestion["question"]) > 165) {
+                                echo substr($listeQuestion["question"], 0, 165)."..."; 
+                            } else {
+                                echo ($listeQuestion["question"]);
+}?>
+                        </li>
                     </td>
                 </tr>
-            <?php endForeach ?>
+            <?php endforeach ?>
         </table>
 </ul>
+    </div>
 <script src="Assets/JS/Index.js"></script>
 </body>
 </html>
