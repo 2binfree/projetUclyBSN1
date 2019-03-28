@@ -11,7 +11,6 @@ if (!empty($_POST['category'])) {
         $mode = md5($_POST['category']);
     }
 }
-var_dump($_POST);
 ?>
 <html lang="fr" dir="ltr">
 
