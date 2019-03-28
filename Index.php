@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<?php require_once 'functions.php';
-setup();
-require_once 'fakeData.php'; ?>
-
-
+<?php 
+    require_once 'functions.php';
+    setup();        
+    require_once 'fakeData.php';      
+    $listeQuestions = $_SESSION["questionList"];    
+    $categories = $_SESSION["categories"];  
+?>
 <html lang="fr" dir="ltr">
 
 <head>
@@ -53,6 +55,7 @@ require_once 'fakeData.php'; ?>
             <?php foreach($listeQuestions as $listeQuestion):?>
                 <tr>
                     <td>
+                        <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);?></em></p> 
                          <li>
                         <?php if (strlen($listeQuestion) > 165) {
                                 echo substr($listeQuestion, 0, 165)."..."; 
@@ -68,5 +71,4 @@ require_once 'fakeData.php'; ?>
     </div>
 <script src="Assets/JS/Index.js"></script>
 </body>
-
 </html>
