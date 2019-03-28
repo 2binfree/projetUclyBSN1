@@ -109,4 +109,15 @@ function createAnswer($data):array
     ];
     return $newValue;
 }
+
+function sortQuestion()
+{
+    $questionList=$_SESSION["questionList"];
+    $result=[];
+    foreach($questionList as $question){
+        $result[$question["time"]]=$question;
+    }
+    krsort($result);
+    return $result;
+}
  ?>

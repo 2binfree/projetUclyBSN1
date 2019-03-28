@@ -3,11 +3,10 @@
     require_once 'functions.php';
     setup();        
     require_once 'fakeData.php';      
-    $listeQuestions = $_SESSION["questionList"];    
-    $categories = $_SESSION["categories"];
+    $listeQuestions = sortQuestion();  
+    $categories = $_SESSION["categories"]; 
 ?>
 <html lang="fr" dir="ltr">
-
 <head>
     <meta charset="utf-8">
     <title>Universalitis</title>
@@ -39,37 +38,38 @@
         <a href="#"><img src="" alt="Bricolage"></a><br><br>
         <a href="#"><img src="" alt="Voyage"></a><br><br>
     </div>
+    
     <div class="block">
-        </div>
-<h1>Ajouter votre question
-    <a class="button" href="Question_form.html" style="font-size: 18px">Question?</a>
-</h1>
-
-<div class="modal" id="modal">
-    <div class="in_modal" id="answer_list">
+      <h1>Ajouter votre question
+        <a class="button" href="Question_form.php">Question?</a>
+      </h1>
     </div>
-</div>
 <ul class="block" id="list">
     <?php $keys = 0;?>
         <table>
             <?php Foreach($listeQuestions as $listeQuestion):
                   $keys = $keys + 1;        
             ?>
+        <table>
+            <?php foreach($listeQuestions as $listeQuestion):?>
                 <tr>
                     <td>
                         <p><em>n°<?php echo $keys ?></em></p>
                         <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);
                                 ?></em></p> 
                          <li>
-                        <?php  
-                            echo ($listeQuestion["question"]);  
-                        ?>
-                        </li>     
+                        <?php if (strlen($listeQuestion["question"]) > 165) {
+                                echo substr($listeQuestion["question"], 0, 165)."..."; 
+                            } else {
+                                echo ($listeQuestion["question"]);
+}?>
+                        </li>
                     </td>
                 </tr>
-            <?php endForeach ?>
+            <?php endforeach ?>
         </table>
 </ul>
+    </div>
 <script src="Assets/JS/Index.js"></script>
 </body>
 </html>
