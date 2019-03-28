@@ -106,4 +106,13 @@ function createAnswer($data):array
     ];
     return $newValue;
 }
+
+function sortQuestion($_SESSION['questionList'])
+{
+    foreach($question as $k => $v){
+        $d[$k] = $v['date'];
+    }
+    array_multisort($d, SORT_DESC , $question);
+    return $value;
+}
  ?>
