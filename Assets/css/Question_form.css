@@ -6,7 +6,7 @@ body {
 header {
 	overflow: hidden;
 	border-color: #FCB000;
-	border-style: solid;	
+	border-style: solid;
     border-radius: 10px;
     background-color: #F5F5F5;
 }
@@ -88,6 +88,7 @@ a {
 	padding: 10px;
 	border-width: thin;
 	margin-top: 50px;
+
 }
 
 .button {
