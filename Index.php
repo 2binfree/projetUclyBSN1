@@ -3,7 +3,7 @@
 require_once 'functions.php';
 setup();
 require_once 'fakeData.php';
-$listeQuestions = sortQuestion();  
+$listeQuestions = sortQuestion();
 $categories = $_SESSION["categories"];
 $mode = "";
 if (!empty($_POST['category'])) {
@@ -46,7 +46,7 @@ if (!empty($_POST['category'])) {
             <input type="submit" name="category" value="voyage"></br>
         </form>
     </div>
-    
+
     <div class="block">
       <h1>Ajouter votre question
         <a class="button" href="Question_form.php">Question?</a>
@@ -55,22 +55,17 @@ if (!empty($_POST['category'])) {
 <ul class="block" id="list">
     <?php $keys = 0;?>
         <table>
-            <?php Foreach($listeQuestions as $listeQuestion):
-                  $keys = $keys + 1;        
-            ?>
-        <table>
-            <?php
-                Foreach($listeQuestions as $listeQuestion):
+            <?php foreach($listeQuestions as $listeQuestion):
+                  $keys = $keys + 1;
                 if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
                 <tr>
                     <td>
-
-                        <p><em>n°<?php echo $keys ?></em></p>
+                        <p><em>n°<?php echo $keys; ?></em></p>
                         <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);
-                                ?></em></p> 
+                                ?></em></p>
                          <li>
                         <?php if (strlen($listeQuestion["question"]) > 165) {
-                                echo substr($listeQuestion["question"], 0, 165)."..."; 
+                                echo substr($listeQuestion["question"], 0, 165)."...";
                             } else {
                                 echo ($listeQuestion["question"]);
                         }?>
