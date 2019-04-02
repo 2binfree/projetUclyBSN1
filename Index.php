@@ -2,7 +2,6 @@
 <?php
 require_once 'functions.php';
 setup();
-require_once 'fakeData.php';
 $listeQuestions = sortQuestion();
 $categories = $_SESSION["categories"];
 $mode = "";
