@@ -25,7 +25,6 @@
         <input value="Envoyer" class="button envoyer" id="Confirm" type="submit">
         <input type="button" onclick="window.location.href = 'Index.php'" value="Annuler" class="button annuler" id="Cancel" type="reset"/>
     </form>
-        <script src="Assets/JS/Index.js"></script>
 </body>
 
 </html>

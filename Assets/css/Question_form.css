@@ -5,7 +5,7 @@ body {
 
 header {
 	overflow: hidden;
-	border-color: #FCB000;
+	border-color: #FCB555;
 	border-style: solid;
     border-radius: 10px;
     background-color: #F5F5F5;
@@ -40,11 +40,12 @@ a {
     margin-left: 15%;
 	border-radius: 10px;
 	border-style: solid;
-	border-color: #FCB000;
+	border-color: #FCB555;
     background-color: #F5F5F5;
 }
 
 .text {
+    color: dimgrey;
 	font-size: 40px;
 	text-align: center;
 	Font-Weight: Bold;
@@ -56,19 +57,13 @@ a {
 .categorie {
     border-style: solid;
     border-radius: 10px;
-    background-color: #FCB000;
+    border-color: dimgrey;
+    border-width:thin; 
+    background-color: #FCB555;
     width: 70%;
     margin-top: 30px;
     margin-left: 15%;
     padding-bottom: 20px;
-}
-
-.cat {
-    padding-left: 20px;
-}
-
-.categ {
-    font-size: 20px;
 }
 
 .text_user {
@@ -77,29 +72,19 @@ a {
     margin-left: 15%;
 	border-radius: 10px;
 	border-style: solid;
-	border-color: #FCB000;
+	border-color: #FCB555;
     background-color: #F5F5F5;
-}
-
-.question {
-	border-color: #FCB000;
-	border-radius: 10px;
-	border-style: solid;
-	padding: 10px;
-	border-width: thin;
-	margin-top: 50px;
-
 }
 
 .button {
 	font-weight: bold;
 	width: 15%;
-	border-color: #FCF000;
+	border-color: dimgrey;
 	border-radius: 10px;
 	border-style: solid;
 	padding: 10px;
 	border-width: thin;
-	background-color: #FCB000;
+	background-color: #FCB555;
 }
 
 .annuler {
@@ -112,4 +97,13 @@ a {
     float: right;
     margin-top: 30px;
     margin-right: 15%;
+}
+
+h2 {
+    margin-left: 5%;
+}
+
+.mot_gauche {
+    margin-left: 7%;
+    display: inline-table;
 }

@@ -31,37 +31,58 @@ if (!empty($_POST) && $_POST['formType'] == "question") {
        <p class="text">Saisir votre question</p>
    </div>
    <form class="" action="Question_form.php" method="post">
-       <textarea placeholder="Ecrivez votre question ici" id="myid" class="block text_user" name="question" required minlength="50" maxlength="500" size="50" wrap="hard"></textarea>
-       <input type="hidden" name="formType" value="question">
-       <input type="submit" value="Envoyer" class="button gauche" name="submit">
-       <input type="button" onclick="window.location.href = 'Index.php'" value="Annuler" class="button droite" id="Cancel">
        <div class="categorie">
            <h2>Choisir mots-clés :</h2>
+           <div class="mot_gauche">
            <input type="radio" id="Finance" name="category" value="finance">
-           <label for="Finance">Finance</label><br>
+           <label for="Finance">Finance</label>
+           </div>
+           <div class="mot_gauche">
            <input type="radio" id="Culture" name="category" value="culture">
-           <label for="Culture">Culture</label><br>
+           <label for="Culture">Culture</label>
+           </div>
+           <div class="mot_gauche">
            <input type="radio" id="Divertissements" name="category" value="divertissements">
-           <label for="Divertissements">Divertissements</label><br>
+           <label for="Divertissements">Divertissements</label>
+           </div>
+           <div class="mot_gauche">
            <input type="radio" id="Santé" name="category" value="sante">
-           <label for="Santé">Santé</label><br>
+           <label for="Santé">Santé</label>
+           </div>
+           <div class="mot_gauche">
            <input type="radio" id="Sport" name="category" value="sport">
-           <label for="Sport">Sport</label><br>
+           <label for="Sport">Sport</label>
+           </div>
+           <div class="mot_gauche">
            <input type="radio" id="Sciences" name="category" value="science">
-           <label for="Sciences">Sciences</label><br>
+           <label for="Sciences">Sciences</label>
+           </div>
+           <div class="mot_gauche">
            <input type="radio" id="Technologies" name="category" value="technologie">
-           <label for="Technologies">Technologies</label><br>
+           <label for="Technologies">Technologies</label>
+           </div>
+           <div class="mot_gauche">
            <input type="radio" id="Mode" name="category" value="mode">
-           <label for="Mode">Mode</label><br>
+           <label for="Mode">Mode</label>
+           </div>
+           <div class="mot_gauche">
            <input type="radio" id="Cuisine" name="category" value="cuisine">
-           <label for="Cuisine">Cuisine</label><br>
+           <label for="Cuisine">Cuisine</label>
+           </div>
+           <div class="mot_gauche">
            <input type="radio" id="Bricolage" name="category" value="bricolage">
-           <label for="Bricolage">Bricolage</label><br>
+           <label for="Bricolage">Bricolage</label>
+           </div>
+           <div  class="mot_gauche">
            <input type="radio" id="Voyage" name="category" value="voyage">
-           <label for="Voyage">Voyage</label><br>
+           <label for="Voyage">Voyage</label>
+           </div>
        </div>
+       <textarea placeholder="Ecrivez votre question ici" id="myid" class="block text_user" name="question" required minlength="50" maxlength="500" size="50" wrap="hard" rows="10"></textarea>
+       <input type="hidden" name="formType" value="question">
+       <input type="submit" value="Envoyer" class="button envoyer" name="submit">
+       <input type="button" onclick="window.location.href = 'Index.php'" value="Annuler" class="button annuler" id="Cancel">
    </form>
-   <script src="Assets/JS/Index.js"></script>
 </body>
 
 </html>
