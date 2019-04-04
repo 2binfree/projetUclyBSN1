@@ -12,6 +12,7 @@ if (!empty($_POST['category'])) {
 }
 ?>
 <html lang="fr" dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <title>Universalitis</title>
@@ -32,50 +33,51 @@ if (!empty($_POST['category'])) {
     </header>
     <div class="sidebar">
         <form action="Index.php" method="post">
-            <input type="submit" name="category" value="finance"></br>
-            <input type="submit" name="category" value="culture"></br>
-            <input type="submit" name="category" value="divertissement"></br>
-            <input type="submit" name="category" value="sante"></br>
-            <input type="submit" name="category" value="sport"></br>
-            <input type="submit" name="category" value="science"></br>
-            <input type="submit" name="category" value="technologie"></br>
-            <input type="submit" name="category" value="mode"></br>
-            <input type="submit" name="category" value="cuisine"></br>
-            <input type="submit" name="category" value="bricolage"></br>
-            <input type="submit" name="category" value="voyage"></br>
+            <input type="submit" name="category" value="finance"><br>
+            <input type="submit" name="category" value="culture"><br>
+            <input type="submit" name="category" value="divertissement"><br>
+            <input type="submit" name="category" value="sante"><br>
+            <input type="submit" name="category" value="sport"><br>
+            <input type="submit" name="category" value="science"><br>
+            <input type="submit" name="category" value="technologie"><br>
+            <input type="submit" name="category" value="mode"><br>
+            <input type="submit" name="category" value="cuisine"><br>
+            <input type="submit" name="category" value="bricolage"><br>
+            <input type="submit" name="category" value="voyage"><br>
         </form>
     </div>
 
     <div class="block">
-      <h1>Ajouter votre question
-        <a class="button" href="Question_form.php">Question?</a>
-      </h1>
+        <h1>Ajouter votre question
+            <a class="button" href="Question_form.php">Question?</a>
+        </h1>
     </div>
-<ul class="block" id="list">
-    <?php $keys = 0;?>
+    <ul class="block" id="list">
+        <?php $keys = 0;?>
         <table>
             <?php foreach($listeQuestions as $index=>$listeQuestion):
-                    $keys = $keys + 1;
+                    $keys++;
                 if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
-                <tr>
-                    <td>
-                        <p><em>n°<?php echo $keys; ?></em></p>
-                        <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);
+            <tr>
+                <td>
+                    <p><em>n°<?php echo $keys; ?></em></p>
+                    <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);
                                 ?></em></p>
-                         <li>
+                    <li>
                         <?php if (strlen($listeQuestion["question"]) > 165) {
                                 echo substr($listeQuestion["question"], 0, 165)."...";
                             } else {
                                 echo ($listeQuestion["question"]);
                         }?>
                         <br><a href="Answer_form.php?qid=<?php echo $index; ?>" class="button">Answer</a>
-                            </li>
-                        </td>
-                    </tr>
-                <?php endif;
+                    </li>
+                </td>
+            </tr>
+            <?php endif;
             endforeach; ?>
         </table>
     </ul>
 
 </body>
+
 </html>

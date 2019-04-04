@@ -31,7 +31,7 @@ if (!empty($_POST) && $_POST['formType'] == "question") {
        <p class="text">Saisir votre question</p>
    </div>
    <form class="" action="Question_form.php" method="post">
-       <textarea placeholder="Ecrivez votre question ici" id="myid" class="block text_user" name="question" required minlength="50" maxlength="500" size="50" wrap="hard"></textarea>
+       <textarea placeholder="Ecrivez votre question ici" id="myid" class="block text_user" name="question" required minlength="25" maxlength="500" size="50" wrap="hard"></textarea>
        <input type="hidden" name="formType" value="question">
        <input type="submit" value="Envoyer" class="button gauche" name="submit">
        <input type="button" onclick="window.location.href = 'Index.php'" value="Annuler" class="button droite" id="Cancel">
