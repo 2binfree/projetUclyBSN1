@@ -12,6 +12,7 @@ if (!empty($_POST['category'])) {
 }
 ?>
 <html lang="fr" dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <title>Universalitis</title>
@@ -46,6 +47,7 @@ if (!empty($_POST['category'])) {
         </form>
     </div>
 
+<<<<<<< HEAD
     <div class="ajt_question">
       <h1>Posez votre question
         <a class="button" href="Question_form.php">Ajouter ma question</a>
@@ -75,6 +77,39 @@ if (!empty($_POST['category'])) {
     </ul>
             <?php endif;
                 endforeach; ?>
+=======
+    <div class="block">
+        <h1>Ajouter votre question
+            <a class="button" href="Question_form.php">Question?</a>
+        </h1>
+    </div>
+    <ul class="block" id="list">
+        <?php $keys = 0;?>
+        <table>
+            <?php foreach($listeQuestions as $index=>$listeQuestion):
+                    $keys++;
+                if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
+            <tr>
+                <td>
+                    <p><em>n°<?php echo $keys; ?></em></p>
+                    <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);
+                                ?></em></p>
+                    <li>
+                        <?php if (strlen($listeQuestion["question"]) > 165) {
+                                echo substr($listeQuestion["question"], 0, 165)."...";
+                            } else {
+                                echo ($listeQuestion["question"]);
+                        }?>
+                        <br><a href="Answer_form.php?qid=<?php echo $index; ?>" class="button">Answer</a>
+                    </li>
+                </td>
+            </tr>
+            <?php endif;
+            endforeach; ?>
+        </table>
+    </ul>
+>>>>>>> c1a58cf8b7ad031cc88e8ff8d118f58c0a89605f
 
 </body>
+
 </html>
