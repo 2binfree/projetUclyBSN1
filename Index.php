@@ -57,6 +57,7 @@ if (!empty($_POST['category'])) {
         <table>
             <?php foreach($listeQuestions as $index=>$listeQuestion):
                     $keys++;
+                    $answerCount = count($listeQuestion['answers']);
                 if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
             <tr>
                 <td>
