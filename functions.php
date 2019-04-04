@@ -114,8 +114,8 @@ function sortQuestion()
 {
     $questionList=$_SESSION["questionList"];
     $result=[];
-    foreach($questionList as $question){
-        $result[$question["time"]]=$question;
+    foreach($questionList as $index=>$question){
+        $result[$index]=$question;
     }
     krsort($result);
     return $result;
