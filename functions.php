@@ -112,10 +112,10 @@ function createAnswer($data):array
 
 function sortQuestion()
 {
-    $questionList=$_SESSION["questionList"];
-    $result=[];
+    $questionList = $_SESSION["questionList"];
+    $result = [];
     foreach($questionList as $index=>$question){
-        $result[$index]=$question;
+        $result[$index] = $question;
     }
     krsort($result);
     return $result;
