@@ -90,7 +90,7 @@ function checkCategories() {
 * @return array
 */
 function addAnswer(array $question, array $answer):array {
-    $question['answer'][] = $answer;   
+    $question['answers'][] = $answer;   
     return $question;
 }
 
