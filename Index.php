@@ -46,69 +46,35 @@ if (!empty($_POST['category'])) {
             <input type="submit" name="category" value="voyage"><br>
         </form>
     </div>
-
-<<<<<<< HEAD
-    <div class="ajt_question">
-      <h1>Posez votre question
-        <a class="button" href="Question_form.php">Ajouter ma question</a>
-      </h1>
-    </div>
     
+    <div class="ajt_question">
+        <h1>Posez votre question
+            <a class="button" href="Question_form.php">Ajouter ma question</a>
+        </h1>
+    </div>
     <?php $keys = 0;
-    foreach($listeQuestions as $listeQuestion):
-                  $keys = $keys + 1;
-                if (empty($mode) || $listeQuestion["categoryKey"] === $mode) :?>
+        foreach($listeQuestions as $index=>$listeQuestion):
+            $keys++;
+            if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
     <ul class="block" id="list">
         <table>
-                <tr>
-                    <td>
-                        <p><b>N°<?php echo $keys;?></b>/ <?php echo ($categories[$listeQuestion["categoryKey"]]);?></p>
-                            <li>
-                                <?php if (strlen($listeQuestion["question"]) > 155) {
+            <tr>
+                <td>
+                    <p><b>N°<?php echo $keys; ?></b>/ <?php echo ($categories[$listeQuestion["categoryKey"]]);?></p>
+                        <li>
+                            <?php if (strlen($listeQuestion["question"]) > 155) {
                                     echo substr($listeQuestion["question"], 0, 155)."...";
                                 } else {
                                     echo ($listeQuestion["question"]);
-                                }?>
-                            </li>
-                        <a class="answer" href="Answer_form.php">Répondre</a>
-                    </td>
-                </tr>
-        </table>
-    </ul>
-            <?php endif;
-                endforeach; ?>
-=======
-    <div class="block">
-        <h1>Ajouter votre question
-            <a class="button" href="Question_form.php">Question?</a>
-        </h1>
-    </div>
-    <ul class="block" id="list">
-        <?php $keys = 0;?>
-        <table>
-            <?php foreach($listeQuestions as $index=>$listeQuestion):
-                    $keys++;
-                if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
-            <tr>
-                <td>
-                    <p><em>n°<?php echo $keys; ?></em></p>
-                    <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);
-                                ?></em></p>
-                    <li>
-                        <?php if (strlen($listeQuestion["question"]) > 165) {
-                                echo substr($listeQuestion["question"], 0, 165)."...";
-                            } else {
-                                echo ($listeQuestion["question"]);
-                        }?>
-                        <br><a href="Answer_form.php?qid=<?php echo $index; ?>" class="button">Answer</a>
-                    </li>
+                            }?>
+                        </li>
+                    <a href="Answer_form.php?qid=<?php echo $index; ?>" class="answer">Répondre</a>
                 </td>
             </tr>
-            <?php endif;
-            endforeach; ?>
         </table>
     </ul>
->>>>>>> c1a58cf8b7ad031cc88e8ff8d118f58c0a89605f
+    <?php endif;
+        endforeach; ?>
 
 </body>
 
