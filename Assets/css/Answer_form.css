@@ -5,7 +5,7 @@ body {
 
 header {
 	overflow: hidden;
-	border-color: #FCB000;
+	border-color: #FCB555;
 	border-style: solid;	
     border-radius: 10px;
     background-color: #F5F5F5;
@@ -40,12 +40,13 @@ a {
     margin-left: 15%;
 	border-radius: 10px;
 	border-style: solid;
-	border-color: #FCB000;
+	border-color: #FCB555;
     background-color: #F5F5F5;
 }
 
 .text {
-	font-size: 40px;
+    color: dimgrey;
+    font-size: 40px;
 	text-align: center;
 	Font-Weight: Bold;
 	margin-bottom: 20px;
@@ -59,12 +60,12 @@ a {
     margin-left: 15%;
 	border-radius: 10px;
 	border-style: solid;
-	border-color: #FCB000;
+	border-color: #FCB555;
     background-color: #F5F5F5;
 }
 
 .question {
-	border-color: #FCB000;
+	border-color: #FCB555;
 	border-radius: 10px;
 	border-style: solid;
 	padding: 10px;
@@ -76,12 +77,12 @@ a {
 .button {
 	font-weight: bold;
 	width: 15%;
-	border-color: #FCF000;
+	border-color: dimgrey;
 	border-radius: 10px;
 	border-style: solid;
 	padding: 10px;
 	border-width: thin;
-	background-color: #FCB000;
+	background-color: #FCB555;
 }
 
 .annuler {
