@@ -46,7 +46,7 @@ if (!empty($_POST['category'])) {
             <input type="submit" name="category" value="voyage"><br>
         </form>
     </div>
-    
+
     <div class="ajt_question">
         <h1>Posez votre question
             <a class="button" href="Question_form.php">Ajouter ma question</a>
@@ -68,8 +68,8 @@ if (!empty($_POST['category'])) {
                                 } else {
                                     echo ($listeQuestion["question"]);
                             }?>
-                        <p><em><?php echo "Nombre de réponses: $answerCount"; ?></em></p>
                         </li>
+                        <p><em><?php echo "Nombre de réponses: $answerCount"; ?></em></p>
                     <a href="Answer_form.php?qid=<?php echo $index; ?>" class="answer">Répondre</a>
                 </td>
             </tr>
