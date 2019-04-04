@@ -56,7 +56,7 @@ if (!empty($_POST['category'])) {
         <?php $keys = 0;?>
         <table>
             <?php foreach($listeQuestions as $index=>$listeQuestion):
-                    $keys = $keys + 1;
+                    $keys++;
                 if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
             <tr>
                 <td>
