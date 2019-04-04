@@ -90,13 +90,8 @@ function checkCategories() {
 * @return array
 */
 function addAnswer(array $question, array $answer):array {
-    $question['answer'][] = $answer;
-    if (strlen($answer['answer']) > 506) {
-        return 1;
-    }
-    else{
+    $question['answer'][] = $answer;   
     return $question;
-    }
 }
 
 /**
@@ -118,10 +113,10 @@ function createAnswer($data):array
 
 function sortQuestion()
 {
-    $questionList=$_SESSION["questionList"];
-    $result=[];
-    foreach($questionList as $question){
-        $result[$question["time"]]=$question;
+    $questionList = $_SESSION["questionList"];
+    $result = [];
+    foreach($questionList as $index=>$question){
+        $result[$index] = $question;
     }
     krsort($result);
     return $result;

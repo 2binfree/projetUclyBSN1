@@ -55,8 +55,8 @@ if (!empty($_POST['category'])) {
     <ul class="block" id="list">
         <?php $keys = 0;?>
         <table>
-            <?php foreach($listeQuestions as $listeQuestion):
-                  $keys = $keys + 1;
+            <?php foreach($listeQuestions as $index=>$listeQuestion):
+                    $keys = $keys + 1;
                 if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
             <tr>
                 <td>
@@ -69,6 +69,7 @@ if (!empty($_POST['category'])) {
                             } else {
                                 echo ($listeQuestion["question"]);
                         }?>
+                        <br><a href="Answer_form.php?qid=<?php echo $index; ?>" class="button">Answer</a>
                     </li>
                 </td>
             </tr>
@@ -76,7 +77,6 @@ if (!empty($_POST['category'])) {
             endforeach; ?>
         </table>
     </ul>
-    <script src="Assets/JS/Index.js"></script>
 
 </body>
 
