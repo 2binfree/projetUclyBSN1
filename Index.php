@@ -56,6 +56,7 @@ if (!empty($_POST['category'])) {
         <table>
             <?php foreach($listeQuestions as $index=>$listeQuestion):
                     $keys = $keys + 1;
+                    $answerCount = count($listeQuestion['answers']);
                 if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
                 <tr>
                     <td>
@@ -67,7 +68,9 @@ if (!empty($_POST['category'])) {
                                 echo substr($listeQuestion["question"], 0, 165)."...";
                             } else {
                                 echo ($listeQuestion["question"]);
-                        }?>
+                        }
+                        ?>
+                        <p><em><?php echo "Nombre de réponses: $answerCount"; ?></em></p>
                         <br><a href="Answer_form.php?qid=<?php echo $index; ?>" class="button">Answer</a>
                             </li>
                         </td>
