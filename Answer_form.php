@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php require_once 'functions.php';
+setup();
+$mode = "";
+if (!empty($_POST) && $_POST['formType'] == "question") {
+   $result = createAnswer($_POST);
+   if (addAnswer($result) == 0) {
+       header('Location: Index.php');
+   }
+}
+?>
+?>
+
 <html lang="fr" dir="ltr">
 
 <head>
@@ -21,7 +33,7 @@
 		<p class="text">Saisir votre réponse</p>
 	</div>
 	<form class="" action="Index.php" method="post">
-        <textarea name="reponse" class="reponse" rows="15" placeholder="Ecrivez votre réponse ici"></textarea>
+        <textarea name="reponse" class="reponse" rows="15" placeholder="Ecrivez votre réponse ici" required minlength="25" maxlength="500" size="50" wrap="hard"></textarea>
         <input value="Envoyer" class="button envoyer" id="Confirm" type="submit">
         <input type="button" onclick="window.location.href = 'Index.php'" value="Annuler" class="button annuler" id="Cancel" type="reset"/>
     </form>

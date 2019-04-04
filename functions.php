@@ -19,7 +19,7 @@ function setup() {
 */
 function saveQuestion(array $question) {
     $id = md5($question['time'] . $question['question']);
-    if (strlen($question['question']) > 500) {
+    if (strlen($question['question']) > 506) {
         return 1;
     }
     if (checkCategory($question) === true) {
@@ -90,8 +90,13 @@ function checkCategories() {
 * @return array
 */
 function addAnswer(array $question, array $answer):array {
-    $question['answers'][] = $answer;
+    $question['answer'][] = $answer;
+    if (strlen($answer['answer']) > 506) {
+        return 1;
+    }
+    else{
     return $question;
+    }
 }
 
 /**
@@ -109,6 +114,7 @@ function createAnswer($data):array
     ];
     return $newValue;
 }
+
 
 function sortQuestion()
 {

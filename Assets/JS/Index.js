@@ -25,7 +25,7 @@ var i;
 for (i = 0; i < myNodelist.length; i++) {
   var button = document.createElement("a");
   var answer = document.createTextNode("Answer");
-  button.href = "Answer_form.html"
+  button.href = "Answer_form.php"
   button.appendChild(answer)
   button.className = "button";
   insertAfter(myNodelist[i], button)
