@@ -32,9 +32,15 @@ if (!empty($_POST) && $_POST['formType'] == "Answer") {
 			<a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
 		</div>
 	</header>
-	<div class="titre">
+    
+    <div class="titre">
 		<p class="text">Saisir votre réponse</p>
 	</div>
+    
+    <div class="echoQuestion">
+        <p class="textQuestion"><?php echo $_SESSION['questionList'][$id]["question"] ?></p>
+    </div>
+    
 	<form class="" action="Answer_form.php" method="post">
         <textarea name="answer" class="reponse" rows="15" placeholder="Ecrivez votre réponse ici" required minlength="25" maxlength="500" size="50" wrap="hard"></textarea>
         <input type="hidden" name="id" value='<?php echo "$id"; ?>'>
