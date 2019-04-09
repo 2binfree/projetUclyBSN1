@@ -47,36 +47,36 @@ if (!empty($_POST['category'])) {
         </form>
     </div>
 
-    <div class="block">
-        <h1>Ajouter votre question
-            <a class="button" href="Question_form.php">Question?</a>
+    <div class="ajt_question">
+        <h1>Posez votre question
+            <a class="button" href="Question_form.php">Ajouter ma question</a>
         </h1>
     </div>
+    <?php $keys = 0;
+        foreach($listeQuestions as $index=>$listeQuestion):
+            $keys++;
+            $answerCount = count($listeQuestion['answers']);
+            if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
     <ul class="block" id="list">
-        <?php $keys = 0;?>
         <table>
-            <?php foreach($listeQuestions as $index=>$listeQuestion):
-                    $keys = $keys + 1;
-                if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
             <tr>
                 <td>
-                    <p><em>n°<?php echo $keys; ?></em></p>
-                    <p><em><?php echo ($categories[$listeQuestion["categoryKey"]]);
-                                ?></em></p>
+                    <p><b>N°<?php echo $keys; ?></b>/ <?php echo ($categories[$listeQuestion["categoryKey"]]);?></p>
                     <li>
-                        <?php if (strlen($listeQuestion["question"]) > 165) {
-                                echo substr($listeQuestion["question"], 0, 165)."...";
-                            } else {
-                                echo ($listeQuestion["question"]);
-                        }?>
-                        <br><a href="Answer_form.php?qid=<?php echo $index; ?>" class="button">Answer</a>
+                        <?php if (strlen($listeQuestion["question"]) > 155) {
+                                    echo substr($listeQuestion["question"], 0, 155)."...";
+                                } else {
+                                    echo ($listeQuestion["question"]);
+                            }?>
                     </li>
+                    <p><em><?php echo "Nombre de réponses: $answerCount"; ?></em></p>
+                    <a href="Answer_form.php?qid=<?php echo $index; ?>" class="answer">Répondre</a>
                 </td>
             </tr>
-            <?php endif;
-            endforeach; ?>
         </table>
     </ul>
+    <?php endif;
+        endforeach; ?>
     <div class="block floot">
         <a href="mentionsLegales.php">Mentions Légales</a>
     </div>

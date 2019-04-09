@@ -53,15 +53,26 @@ a {
     color: Black;
 }
 
+.ajt_question {
+    color: dimgrey;
+    width: 62.7%;
+    margin-left: 23%;
+    margin-top: 50px;
+	padding-left: 3%;
+    padding-bottom: 5px;
+    border-radius: 10px;
+	border-style: solid;
+	border-color: #FCB000;
+    background-color: #F5F5F5;
+}
+
 .block {
     width: 60%;
     margin-left: 23%;
 	margin-top: 50px;
-    margin-right: 25%;
 	padding-left: 3%;
 	padding-right: 50px;
-	padding-top: 0px;
-    padding-bottom: 25px;
+    padding-bottom: 45px;
 	border-radius: 10px;
 	border-style: solid;
 	border-color: #FCB000;
@@ -134,7 +145,7 @@ p {
 .button {
     font-size: 18px;
 	font-weight: bold;
-	margin-left: 80%;
+	margin-left: 50%;
 	border-style: solid;
 	padding: 10px;
     border-color: #FCF000;
@@ -167,5 +178,18 @@ p {
 .floot {
     vertical-align: middle;
     text-align: center;
-    padding-top: 25px
+    padding-top: 35px;
+}
+
+.answer {
+    position: absolute;
+    left: 75%;
+    font-size: 18px;
+	font-weight: bold;
+    border-style: solid;
+    padding: 10px;
+    border-color: #FCF000;
+	border-radius: 10px;
+    border-width: thin;
+	background-color: #FCB000;
 }
