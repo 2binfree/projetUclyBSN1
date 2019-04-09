@@ -187,3 +187,11 @@ p {
     border-width: thin;
 	background-color: #FCB000;
 }
+
+.report {
+    background-color: #f44c1d;
+    border-color: #e2461b;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
