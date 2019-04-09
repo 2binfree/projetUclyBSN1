@@ -62,8 +62,8 @@ if (!empty($_POST['category'])) {
             <tr>
                 <td>
                     <p><b>N°<?php echo $keys; ?></b>/ <?php echo ($categories[$listeQuestion["categoryKey"]]);?></p>
-                        <li>
-                            <?php if (strlen($listeQuestion["question"]) > 155) {
+                    <li>
+                        <?php if (strlen($listeQuestion["question"]) > 155) {
                                     echo substr($listeQuestion["question"], 0, 155)."...";
                                 } else {
                                     echo ($listeQuestion["question"]);
@@ -81,7 +81,9 @@ if (!empty($_POST['category'])) {
     </ul>
     <?php endif;
         endforeach; ?>
-
+    <div class="block floot">
+        <a href="mentionsLegales.php">Mentions Légales</a>
+    </div>
 </body>
 
 </html>
