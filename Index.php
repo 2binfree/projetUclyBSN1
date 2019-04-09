@@ -63,14 +63,13 @@ if (!empty($_POST['category'])) {
                 <td>
                     <p><b>N°<?php echo $keys; ?></b>/ <?php echo ($categories[$listeQuestion["categoryKey"]]);?></p>
                         <li>
-                            <?php if (strlen($listeQuestion["question"]) > 155) {
-                                    echo substr($listeQuestion["question"], 0, 155)."...";
-                                } else {
-                                    echo ($listeQuestion["question"]);
-                            }?>
-                        </li>
+                            <?php if (strlen($listeQuestion["question"]) > 155) { ?>
+                                    <?php echo $index;?>"> <?php echo substr($listeQuestion["question"], 0, 155)."..."; ?>
+                               <?php  } else { ?>
+                            <a class="link" href="Question_page.php?id=<?php echo $index;?>"> <?php echo ($listeQuestion["question"]);?> </a>
+                            <?php }?>
+                            </li>
                         <p><em><?php echo "Nombre de réponses: $answerCount"; ?></em></p>
-                    <a href="Answer_form.php?qid=<?php echo $index; ?>" class="answer">Répondre</a>
                 </td>
             </tr>
         </table>

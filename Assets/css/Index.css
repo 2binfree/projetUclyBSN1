@@ -187,3 +187,7 @@ p {
     border-width: thin;
 	background-color: #FCB000;
 }
+
+.link {
+    text-decoration: none;
+}
