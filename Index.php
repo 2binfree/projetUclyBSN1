@@ -77,7 +77,9 @@ if (!empty($_POST['category'])) {
             endforeach; ?>
         </table>
     </ul>
-
+    <div class="block floot">
+        <a href="mentionsLegales.php">Mentions Légales</a>
+    </div>
 </body>
 
 </html>
