@@ -145,14 +145,15 @@ p {
 .button {
     font-size: 18px;
 	font-weight: bold;
-	margin-left: 50%;
+	float: right;
 	border-style: solid;
 	padding: 10px;
     border-color: dimgray;
 	border-radius: 10px;
-	margin-top: 30px;
+	margin-right: 6%;
 	border-width: thin;
 	background-color: #FCB555;
+    white-space: nowrap;
 }
 
 .modal {
