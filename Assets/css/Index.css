@@ -178,8 +178,10 @@ p {
 .floot {
     vertical-align: middle;
     text-align: center;
-    padding-top: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
+
 
 .answer {
     position: absolute;

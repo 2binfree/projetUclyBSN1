@@ -100,26 +100,6 @@ a {
     margin-right: 15%;
 }
 
-.block {
-    width: 60%;
-    margin-left: 23%;
-	margin-top: 50px;
-    margin-right: 25%;
-	padding-left: 3%;
-	padding-right: 50px;
-	padding-top: 0px;
-    padding-bottom: 25px;
-	border-radius: 10px;
-	border-style: solid;
-	border-color: #FCB000;
-    background-color: #F5F5F5;
-}
-
-.floot {
-    vertical-align: middle;
-    text-align: center;
-    padding-top: 25px
-
 h2 {
     margin-left: 5%;
 }
@@ -128,3 +108,22 @@ h2 {
     margin-left: 7%;
     display: inline-table;
 }
+
+.block {
+    width: 69.7%;
+    margin-top: 150px;
+    margin-left: 15%;
+    border-width: 3px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #FCB555;
+    background-color: #F5F5F5;
+}
+
+.floot {
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
