@@ -67,9 +67,10 @@ a {
 }
 
 .text_user {
-    width: 70%;
+    width: 69.7%;
     margin-top: 30px;
     margin-left: 15%;
+    border-width: 3px;
 	border-radius: 10px;
 	border-style: solid;
 	border-color: #FCB555;
