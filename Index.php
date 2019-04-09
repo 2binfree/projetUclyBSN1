@@ -69,7 +69,11 @@ if (!empty($_POST['category'])) {
                                     echo ($listeQuestion["question"]);
                             }?>
                         </li>
-                        <p><em><?php echo "Nombre de réponses: $answerCount"; ?></em></p>
+                        <p><em><?php if ($answerCount <= 1) {
+                                        echo "$answerCount réponse";    
+                                } else {
+                                        echo "$answerCount réponses";
+                    }?></em></p>
                     <a href="Answer_form.php?qid=<?php echo $index; ?>" class="answer">Répondre</a>
                 </td>
             </tr>

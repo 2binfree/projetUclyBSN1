@@ -5,7 +5,7 @@ body {
 
 header {
     overflow: hidden;
-    border-color: #FCB000;
+    border-color: #FCB555;
     border-style: solid;
     border-radius: 10px;
     background-color: #F5F5F5;
@@ -43,7 +43,7 @@ header {
     margin-left: 3.5%;
     background-color: #F5F5F5;
     padding: 20px;
-    border-color: #FCB000;
+    border-color: #FCB555;
     border-radius: 10px;
     border-style: solid;
     font-size: 20px;
@@ -54,7 +54,7 @@ a {
 }
 
 .ajt_question {
-    color: dimgrey;
+    color: dimgray;
     width: 62.7%;
     margin-left: 23%;
     margin-top: 50px;
@@ -62,7 +62,7 @@ a {
     padding-bottom: 5px;
     border-radius: 10px;
 	border-style: solid;
-	border-color: #FCB000;
+	border-color: #FCB555;
     background-color: #F5F5F5;
 }
 
@@ -75,7 +75,7 @@ a {
     padding-bottom: 60px;
 	border-radius: 10px;
 	border-style: solid;
-	border-color: #FCB000;
+	border-color: #FCB555;
     background-color: #F5F5F5;
 }
 
@@ -84,7 +84,7 @@ p {
 }
 
 li {
-    border-color: #FCB000;
+    border-color: #FCB555;
     border-radius: 10px;
     border-style: solid;
     padding: 10px;
@@ -134,7 +134,7 @@ p {
 }
 
 .question {
-	border-color: #FCB000;
+	border-color: #FCB555;
 	border-radius: 10px;
 	border-style: solid;
 	padding: 10px;
@@ -148,11 +148,11 @@ p {
 	margin-left: 50%;
 	border-style: solid;
 	padding: 10px;
-    border-color: #FCF000;
+    border-color: dimgray;
 	border-radius: 10px;
 	margin-top: 30px;
 	border-width: thin;
-	background-color: #FCB000;
+	background-color: #FCB555;
 }
 
 .modal {
@@ -182,8 +182,8 @@ p {
 	font-weight: bold;
     border-style: solid;
     padding: 10px;
-    border-color: #FCF000;
+    border-color: dimgray;
 	border-radius: 10px;
     border-width: thin;
-	background-color: #FCB000;
+	background-color: #FCB555;
 }
