@@ -58,26 +58,28 @@ if (!empty($_POST['category'])) {
             $answerCount = count($listeQuestion['answers']);
             if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
     <ul class="block" id="list">
+        <a class="link" href="Question_page.php?id=<?php echo $index;?>">
         <table>
             <tr>
                 <td>
                     <p><b>N°<?php echo $keys; ?></b>/ <?php echo ($categories[$listeQuestion["categoryKey"]]);?></p>
-                    <li>
-                        <?php if (strlen($listeQuestion["question"]) > 155) {
-                                    echo substr($listeQuestion["question"], 0, 155)."...";
-                                } else {
-                                    echo ($listeQuestion["question"]);
-                            }?>
-                        </li>
+
+                        <li>
+                            <?php if (strlen($listeQuestion["question"]) > 155) { 
+                                     echo $index;?>"> <?php echo substr($listeQuestion["question"], 0, 155)."..."; ?>
+                               <?php  } else { ?>
+                             <?php echo ($listeQuestion["question"]);?> 
+                            <?php }?>
+                            </li>
                         <p><em><?php if ($answerCount <= 1) {
                                         echo "$answerCount réponse";    
                                 } else {
                                         echo "$answerCount réponses";
-                    }?></em></p>
-                    <a href="Answer_form.php?qid=<?php echo $index; ?>" class="answer">Répondre</a>
+                        }?></em></p>
+
                 </td>
             </tr>
-        </table>
+            </table></a>
     </ul>
     <?php endif;
         endforeach; ?>
