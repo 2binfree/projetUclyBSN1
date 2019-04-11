@@ -71,9 +71,6 @@ if (!empty($_POST['category'])) {
                              <?php echo ($listeQuestion["question"]);?> 
                             <?php }?>
                             </li>
-                        <p><em><?php echo "Nombre de réponses: $answerCount"; ?></em></p>
-
-                  
                         <p><em><?php if ($answerCount <= 1) {
                                         echo "$answerCount réponse";    
                                 } else {
