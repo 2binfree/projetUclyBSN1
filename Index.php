@@ -58,16 +58,17 @@ if (!empty($_POST['category'])) {
             $answerCount = count($listeQuestion['answers']);
             if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
     <ul class="block" id="list">
+        <a class="link" href="Question_page.php?id=<?php echo $index;?>">
         <table>
             <tr>
                 <td>
                     <p><b>N°<?php echo $keys; ?></b>/ <?php echo ($categories[$listeQuestion["categoryKey"]]);?></p>
 
                         <li>
-                            <?php if (strlen($listeQuestion["question"]) > 155) { ?>
-                                    <?php echo $index;?>"> <?php echo substr($listeQuestion["question"], 0, 155)."..."; ?>
+                            <?php if (strlen($listeQuestion["question"]) > 155) { 
+                                     echo $index;?>"> <?php echo substr($listeQuestion["question"], 0, 155)."..."; ?>
                                <?php  } else { ?>
-                            <a class="link" href="Question_page.php?id=<?php echo $index;?>"> <?php echo ($listeQuestion["question"]);?> </a>
+                             <?php echo ($listeQuestion["question"]);?> 
                             <?php }?>
                             </li>
                         <p><em><?php echo "Nombre de réponses: $answerCount"; ?></em></p>
@@ -77,12 +78,11 @@ if (!empty($_POST['category'])) {
                                         echo "$answerCount réponse";    
                                 } else {
                                         echo "$answerCount réponses";
-                    }?></em></p>
-                    <a href="Answer_form.php?qid=<?php echo $index; ?>" class="answer">Répondre</a>
+                        }?></em></p>
 
                 </td>
             </tr>
-        </table>
+            </table></a>
     </ul>
     <?php endif;
         endforeach; ?>
