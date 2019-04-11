@@ -21,25 +21,25 @@ $id = $_GET["id"];
             <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
         </div>
     </header>
-    
+
         <div class="quest">
             <?php echo $_SESSION['questionList'][$id]["question"]?>
         </div>
             <br/>
-    
+
             <?php
                 $num=0;
                 $listAnswers=$_SESSION['questionList'][$id]["answers"];
                 foreach($listAnswers as $answers): ?>
                     <div class="answ">
-                        <?php $num++; 
+                        <?php $num++;
                          echo "reponse: $num"; ?>
                         <br/>
                       <?php  echo $answers["answer"]; ?>
-                    </div>       
+                    </div>
                <?php endforeach; ?>
-                
-        <a href="Answer_form.php?qid=<?php echo $index; ?>" class="answer">Répondre</a>
+
+        <a href="Answer_form.php?qid=<?php echo $id; ?>" class="answer">Répondre</a>
 
 
 </body>
