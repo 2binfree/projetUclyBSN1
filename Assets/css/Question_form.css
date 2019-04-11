@@ -67,9 +67,10 @@ a {
 }
 
 .text_user {
-    width: 70%;
+    width: 69.7%;
     margin-top: 30px;
     margin-left: 15%;
+    border-width: 3px;
 	border-radius: 10px;
 	border-style: solid;
 	border-color: #FCB555;
@@ -151,3 +152,23 @@ h2 {
     border-width: thin;
 	background-color: #FCB000;
 }
+
+.block {
+    width: 69.7%;
+    margin-top: 150px;
+    margin-left: 15%;
+    border-width: 3px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #FCB555;
+    background-color: #F5F5F5;
+}
+
+.floot {
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+

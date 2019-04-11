@@ -5,7 +5,7 @@ body {
 
 header {
     overflow: hidden;
-    border-color: #FCB000;
+    border-color: #FCB555;
     border-style: solid;
     border-radius: 10px;
     background-color: #F5F5F5;
@@ -43,7 +43,7 @@ header {
     margin-left: 3.5%;
     background-color: #F5F5F5;
     padding: 20px;
-    border-color: #FCB000;
+    border-color: #FCB555;
     border-radius: 10px;
     border-style: solid;
     font-size: 20px;
@@ -54,7 +54,7 @@ a {
 }
 
 .ajt_question {
-    color: dimgrey;
+    color: dimgray;
     width: 62.7%;
     margin-left: 23%;
     margin-top: 50px;
@@ -62,7 +62,7 @@ a {
     padding-bottom: 5px;
     border-radius: 10px;
 	border-style: solid;
-	border-color: #FCB000;
+	border-color: #FCB555;
     background-color: #F5F5F5;
 }
 
@@ -72,10 +72,10 @@ a {
 	margin-top: 50px;
 	padding-left: 3%;
 	padding-right: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 45px;
 	border-radius: 10px;
 	border-style: solid;
-	border-color: #FCB000;
+	border-color: #FCB555;
     background-color: #F5F5F5;
 }
 
@@ -84,7 +84,7 @@ p {
 }
 
 li {
-    border-color: #FCB000;
+    border-color: #FCB555;
     border-radius: 10px;
     border-style: solid;
     padding: 10px;
@@ -134,7 +134,7 @@ p {
 }
 
 .question {
-	border-color: #FCB000;
+	border-color: #FCB555;
 	border-radius: 10px;
 	border-style: solid;
 	padding: 10px;
@@ -145,14 +145,15 @@ p {
 .button {
     font-size: 18px;
 	font-weight: bold;
-	margin-left: 50%;
+	float: right;
 	border-style: solid;
 	padding: 10px;
-    border-color: #FCF000;
+    border-color: dimgray;
 	border-radius: 10px;
-	margin-top: 30px;
+	margin-right: 6%;
 	border-width: thin;
-	background-color: #FCB000;
+	background-color: #FCB555;
+    white-space: nowrap;
 }
 
 .modal {
@@ -175,6 +176,14 @@ p {
     width: 80%;
 }
 
+.floot {
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
 .answer {
     position: absolute;
     left: 75%;
@@ -182,10 +191,18 @@ p {
 	font-weight: bold;
     border-style: solid;
     padding: 10px;
-    border-color: #FCF000;
+    border-color: dimgray;
 	border-radius: 10px;
     border-width: thin;
-	background-color: #FCB000;
+	background-color: #FCB555;
+}
+
+.report {
+    background-color: #f44c1d;
+    border-color: #e2461b;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
 }
 
 .link {

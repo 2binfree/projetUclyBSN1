@@ -62,6 +62,7 @@ if (!empty($_POST['category'])) {
             <tr>
                 <td>
                     <p><b>N°<?php echo $keys; ?></b>/ <?php echo ($categories[$listeQuestion["categoryKey"]]);?></p>
+
                         <li>
                             <?php if (strlen($listeQuestion["question"]) > 155) { ?>
                                     <?php echo $index;?>"> <?php echo substr($listeQuestion["question"], 0, 155)."..."; ?>
@@ -70,13 +71,24 @@ if (!empty($_POST['category'])) {
                             <?php }?>
                             </li>
                         <p><em><?php echo "Nombre de réponses: $answerCount"; ?></em></p>
+
+                  
+                        <p><em><?php if ($answerCount <= 1) {
+                                        echo "$answerCount réponse";    
+                                } else {
+                                        echo "$answerCount réponses";
+                    }?></em></p>
+                    <a href="Answer_form.php?qid=<?php echo $index; ?>" class="answer">Répondre</a>
+
                 </td>
             </tr>
         </table>
     </ul>
     <?php endif;
         endforeach; ?>
-
+    <div class="block floot">
+        <a href="mentionsLegales.php">Mentions Légales</a>
+    </div>
 </body>
 
 </html>
