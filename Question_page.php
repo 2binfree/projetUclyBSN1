@@ -21,8 +21,8 @@ $id = $_GET["id"];
             <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
         </div>
     </header>
-
         <div class="quest">
+            <p class="QU">Question:</p>
             <?php echo $_SESSION['questionList'][$id]["question"]?>
         </div>
             <br/>
@@ -38,7 +38,12 @@ $id = $_GET["id"];
                       <?php  echo $answers["answer"]; ?>
                     </div>
                <?php endforeach; ?>
-
+    <?php
+        if(empty ($_SESSION['questionList'][$id]["answers"])){
+        ?> <p class="svp" >il n'y a pas encore de reponse</p> 
+        <?php }
+        ?>
+                
         <a href="Answer_form.php?qid=<?php echo $id; ?>" class="answer">Répondre</a>
 
 
