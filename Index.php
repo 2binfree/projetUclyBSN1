@@ -11,7 +11,6 @@ if (!empty($currentMode)) {
         $mode = $currentMode;
     }
 };
-echo $mode;
 ?>
 <html lang="fr" dir="ltr">
 
