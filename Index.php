@@ -5,11 +5,13 @@ setup();
 $listeQuestions = sortQuestion();
 $categories = $_SESSION["categories"];
 $mode = "";
-if (!empty($_POST['category'])) {
-    if (isset($categories[md5($_POST['category'])])) {
-        $mode = md5($_POST['category']);
+$currentMode = $_GET['category'];
+if (!empty($currentMode)) {
+    if (isset($categories[$currentMode])) {
+        $mode = $currentMode;
     }
-}
+};
+echo $mode;
 ?>
 <html lang="fr" dir="ltr">
 
@@ -32,27 +34,25 @@ if (!empty($_POST['category'])) {
         </div>
     </header>
     <div class="sidebar">
-        <form action="Index.php" method="post">
-            <input type="submit" name="category" value="finance"><br>
-            <input type="submit" name="category" value="culture"><br>
-            <input type="submit" name="category" value="divertissement"><br>
-            <input type="submit" name="category" value="sante"><br>
-            <input type="submit" name="category" value="sport"><br>
-            <input type="submit" name="category" value="science"><br>
-            <input type="submit" name="category" value="technologie"><br>
-            <input type="submit" name="category" value="mode"><br>
-            <input type="submit" name="category" value="cuisine"><br>
-            <input type="submit" name="category" value="bricolage"><br>
-            <input type="submit" name="category" value="voyage"><br>
+        <form action="Index.php" method="get">
+            <?php
+            foreach ($categories as $index => $category) {
+                ?> <a href="Index.php?category=<?php echo $index ?>" class="category_button"><?php echo $category ?> </a> <?php
+                if (!empty($currentMode) && $currentMode == $index) {?>
+                    <a href="Index.php"><i class="fas fa-times categ_cross"></i></a><?php
+                }
+            }?>
         </form>
     </div>
 
-    <div class="ajt_question">
-        <h1>Posez votre question
+    <div class="add_question">
+        <h1>Liste des questions posées :</h1>
             <a class="button" href="Question_form.php">Ajouter ma question</a>
-        </h1>
     </div>
     <?php $keys = 0;
+        if (empty($_SESSION['questionList'])) {?>
+            <p class="noQuestion">Il n'y a aucune question pour l'instant, soyer le premier à en poser une !</p>
+        <?php }
         foreach($listeQuestions as $index=>$listeQuestion):
             $keys++;
             $answerCount = count($listeQuestion['answers']);
