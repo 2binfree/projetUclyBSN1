@@ -24,23 +24,16 @@ if (!empty($_POST) && $_POST['formType'] == "Answer") {
 </head>
 
 <body>
-	<header>
-		<a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
-		<div class="taskbar">
-			<a href="#"><i class="fas fa-user fa-2x icon"></i></a>
-			<a href="#"><i class="fas fa-bell fa-2x icon"></i></a>
-			<a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
-		</div>
-	</header>
-    
+	<?php include 'header.php'; ?>
+
     <div class="titre">
 		<p class="text">Saisir votre réponse</p>
 	</div>
-    
+
     <div class="echoQuestion">
         <p class="textQuestion"><?php echo $_SESSION['questionList'][$id]["question"] ?></p>
     </div>
-    
+
 	<form class="" action="Answer_form.php" method="post">
         <textarea name="answer" class="reponse" rows="15" placeholder="Ecrivez votre réponse ici" required minlength="25" maxlength="500" size="50" wrap="hard"></textarea>
         <input type="hidden" name="id" value='<?php echo "$id"; ?>'>
@@ -48,9 +41,7 @@ if (!empty($_POST) && $_POST['formType'] == "Answer") {
         <input value="Envoyer" class="button envoyer" id="Confirm" type="submit">
         <input type="button" onclick="window.location.href = 'Index.php'" value="Annuler" class="button annuler" id="Cancel" type="reset"/>
     </form>
-    <div class="block floot">
-        <a href="mentionsLegales.php">Mentions Légales</a>
-    </div>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

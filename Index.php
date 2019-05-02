@@ -23,15 +23,7 @@ if (!empty($currentMode)) {
 </head>
 
 <body>
-    <header>
-        <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
-        <div class="taskbar">
-            <i class="fas fa-search search fa-lg"><input type="text" id="myInput" onkeyup="Search()" placeholder="Recherchez" class="searchbar"></i>
-            <a href="#"><i class="fas fa-user fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-bell fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
-        </div>
-    </header>
+    <?php include 'header.php'; ?>
     <div class="sidebar">
         <form action="Index.php" method="get">
             <?php
@@ -64,14 +56,14 @@ if (!empty($currentMode)) {
                     <p><b>N°<?php echo $keys; ?></b>/ <?php echo ($categories[$listeQuestion["categoryKey"]]);?></p>
 
                         <li>
-                            <?php if (strlen($listeQuestion["question"]) > 155) { 
+                            <?php if (strlen($listeQuestion["question"]) > 155) {
                                      echo $index;?>"> <?php echo substr($listeQuestion["question"], 0, 155)."..."; ?>
                                <?php  } else { ?>
-                             <?php echo ($listeQuestion["question"]);?> 
+                             <?php echo ($listeQuestion["question"]);?>
                             <?php }?>
                             </li>
                         <p><em><?php if ($answerCount <= 1) {
-                                        echo "$answerCount réponse";    
+                                        echo "$answerCount réponse";
                                 } else {
                                         echo "$answerCount réponses";
                         }?></em></p>
@@ -81,10 +73,9 @@ if (!empty($currentMode)) {
             </table></a>
     </ul>
     <?php endif;
-        endforeach; ?>
-    <div class="block floot">
-        <a href="mentionsLegales.php">Mentions Légales</a>
-    </div>
+        endforeach;
+    include 'footer.php'; ?>
+
 </body>
 
 </html>
