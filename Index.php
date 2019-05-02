@@ -23,15 +23,7 @@ if (!empty($currentMode)) {
 </head>
 
 <body>
-    <header>
-        <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
-        <div class="taskbar">
-            <i class="fas fa-search search fa-lg"><input type="text" id="myInput" onkeyup="Search()" placeholder="Recherchez" class="searchbar"></i>
-            <a href="#"><i class="fas fa-user fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-bell fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
-        </div>
-    </header>
+    <?php include 'header.php'; ?>
     <div class="sidebar">
         <form action="Index.php" method="get">
             <?php
@@ -71,7 +63,7 @@ if (!empty($currentMode)) {
                                              }?>
                             </li>
                         <p><em><?php if ($answerCount <= 1) {
-                                        echo "$answerCount réponse";    
+                                        echo "$answerCount réponse";
                                 } else {
                                         echo "$answerCount réponses";
                         }?></em></p>
@@ -83,10 +75,9 @@ if (!empty($currentMode)) {
     <?php } else { ?>
                 <p class="noQuestion">Il n'y a aucune question dans cette catégorie pour l'instant !</p>
         <?php }
-        endforeach; ?>
-    <div class="block floot">
-        <a href="mentionsLegales.php">Mentions Légales</a>
-    </div>
+        endforeach;
+    include 'footer.php'; ?>
+
 </body>
 
 </html>

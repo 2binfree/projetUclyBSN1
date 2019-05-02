@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a><br><br><br><br><br><br>
+    <?php include 'header.php'; ?>
     <h2>Définitions</h2>
     <p><b>Client&nbsp;:</b>&nbsp;tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales.<br>
         <b>Prestations et Services&nbsp;:</b> <a href="https://universalitis.fr">https://universalitis.fr</a> met à disposition des Clients&nbsp;:</p>

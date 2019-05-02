@@ -58,7 +58,7 @@ a {
     border-style: solid;
     border-radius: 10px;
     border-color: dimgrey;
-    border-width:thin; 
+    border-width:thin;
     background-color: #FCB555;
     width: 70%;
     margin-top: 30px;
@@ -126,12 +126,14 @@ h2 {
 }
 
 .quest{
-    width: 62.7%;
-    margin-left: 23%;
-    font-size: 24px;
+    width: 48.7%;
+    margin-left: 25%;
+    font-size: 22px;
+    padding-top: 5px;
     text-align: center;
     margin-top: 50px;
-	padding-left: 3%;
+	padding-left: 1%;
+    padding-right: 1%;
     padding-bottom: 5px;
     border-radius: 10px;
 	border-style: solid;
@@ -142,7 +144,7 @@ h2 {
 .answer {
     position: absolute;
     margin-top: 100px;
-    margin-left: 50%;
+    margin-left: 45%;
     font-size: 18px;
 	font-weight: bold;
     border-style: solid;
@@ -171,4 +173,11 @@ h2 {
     padding-bottom: 15px;
 }
 
-
+.Question{
+    font-size:28px;
+    text-align: center;
+}
+.erreur{
+    color: dimgrey;
+    text-align: center;
+}

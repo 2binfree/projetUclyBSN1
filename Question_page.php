@@ -13,33 +13,28 @@ $id = $_GET["id"];
 </head>
 
 <body>
-    <header>
-        <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
-        <div class="taskbar">
-            <a href="#"><i class="fas fa-user fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-bell fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
-        </div>
-    </header>
-
+    <?php include 'header.php'; ?>
         <div class="quest">
             <?php echo $_SESSION['questionList'][$id]["question"]?>
         </div>
             <br/>
-
             <?php
                 $num=0;
                 $listAnswers=$_SESSION['questionList'][$id]["answers"];
                 foreach($listAnswers as $answers): ?>
-                    <div class="answ">
-                        <?php $num++;
+    <div class="answ">
+        <?php $num++;
                          echo "reponse: $num"; ?>
-                        <br/>
-                      <?php  echo $answers["answer"]; ?>
-                    </div>
-               <?php endforeach; ?>
+        <br />
+        <?php  echo $answers["answer"]; ?>
+    </div>
+    <?php endforeach; ?>
+    <?php
+        if(empty ($_SESSION['questionList'][$id]["answers"])){?>
+            <p class="erreur">il n'y a pas encore de reponses </p>
+    <?php } ?>
+    <a href="Answer_form.php?qid=<?php echo $id; ?>" class="answer">Répondre</a>
 
-        <a href="Answer_form.php?qid=<?php echo $id; ?>" class="answer">Répondre</a>
-
+    <?php include 'footer.php'; ?>
 
 </body>
