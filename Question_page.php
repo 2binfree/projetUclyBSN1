@@ -41,7 +41,6 @@ $id = $_GET["id"];
         if(empty ($_SESSION['questionList'][$id]["answers"])){?>
             <p class="erreur">il n'y a pas encore de reponses </p>
     <?php } ?>
-    <a href="Answer_form.php?qid=<?php echo $id; ?>" class="answer">Répondre</a>
-
+    <a href="Answer_form.php?qid=<?php echo $id; ?>" class="buttonanswer">Répondre</a>
 
 </body>
