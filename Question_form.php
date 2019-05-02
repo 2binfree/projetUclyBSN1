@@ -6,7 +6,9 @@ $isValid = true;
 if (!empty($_POST) && $_POST['formType'] == "question") {
    $result = createQuestion($_POST);
    if (saveQuestion($result) == 0) {
-       header('Location: Index.php');
+       $id = md5($result['time'] . $result['question']);
+       $destination = 'Location: Question_page.php?id='.$id;
+       header($destination);
    } else {
        $isValid = false;
    }
