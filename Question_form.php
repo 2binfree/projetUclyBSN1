@@ -2,13 +2,13 @@
 <?php require_once 'functions.php';
 setup();
 $mode = "";
-$isValid = 0;
+$isValid = true;
 if (!empty($_POST) && $_POST['formType'] == "question") {
    $result = createQuestion($_POST);
    if (saveQuestion($result) == 0) {
        header('Location: Index.php');
    } else {
-       $isValid = 1;
+       $isValid = false;
    }
 }
 ?>
@@ -27,7 +27,7 @@ if (!empty($_POST) && $_POST['formType'] == "question") {
     <div class="titre">
         <p class="text">Saisir votre question</p>
     </div>
-    <?php if ($isValid == 1) {
+    <?php if ($isValid == false) {
         ?> <p class="noQuestion">Il faut attribuer une catégorie a la question !</p>
     <?php } ?>
     <form class="" action="Question_form.php" method="post">
@@ -40,7 +40,7 @@ if (!empty($_POST) && $_POST['formType'] == "question") {
                 </div>
             <?php }?>
         </div>
-        <textarea placeholder="Ecrivez votre question ici" id="myid" class="text_user" name="question" required minlength="25" maxlength="500" size="50" wrap="hard" rows="10"><?php if ($isValid == 1) {
+        <textarea placeholder="Ecrivez votre question ici" id="myid" class="text_user" name="question" required minlength="25" maxlength="500" size="50" wrap="hard" rows="10"><?php if ($isValid == false) {
             echo $result['question'];
         } ?></textarea>
         <input type="hidden" name="formType" value="question">
