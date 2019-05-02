@@ -11,6 +11,10 @@ header {
     background-color: #F5F5F5;
 }
 
+h1 {
+    width: 100%;
+}
+
 .taskbar {
     margin-top: 20px;
     float: right;
@@ -35,14 +39,15 @@ header {
 }
 
 .sidebar {
+    text-align: center;
     float: left;
     overflow: hidden;
-    width: 12%;
+    width: 14%;
     z-index: 1;
     margin-top: 50px;
     margin-left: 3.5%;
     background-color: #F5F5F5;
-    padding: 20px;
+    padding: 10px;
     border-color: #FCB555;
     border-radius: 10px;
     border-style: solid;
@@ -53,13 +58,13 @@ a {
     color: Black;
 }
 
-.ajt_question {
+.add_question {
     color: dimgray;
     width: 62.7%;
-    margin-left: 23%;
+    margin-left: 25%;
     margin-top: 50px;
 	padding-left: 3%;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
     border-radius: 10px;
 	border-style: solid;
 	border-color: #FCB555;
@@ -68,7 +73,7 @@ a {
 
 .block {
     width: 60%;
-    margin-left: 23%;
+    margin-left: 25%;
 	margin-top: 50px;
 	padding-left: 3%;
 	padding-right: 50px;
@@ -143,14 +148,14 @@ p {
 }
 
 .button {
+    text-decoration: none;
+    margin-left: 40%;
     font-size: 18px;
 	font-weight: bold;
-	float: right;
 	border-style: solid;
 	padding: 10px;
     border-color: dimgray;
 	border-radius: 10px;
-	margin-right: 6%;
 	border-width: thin;
 	background-color: #FCB555;
     white-space: nowrap;
@@ -183,7 +188,6 @@ p {
     padding-bottom: 15px;
 }
 
-
 .answer {
     position: absolute;
     left: 75%;
@@ -207,4 +211,32 @@ p {
 
 .link {
     text-decoration: none;
+}
+
+.category_button {
+    float: left;
+    background-color: #FCB555;
+    border: solid;
+    border-color: dimgray;
+	border-radius: 10px;
+    border-width: thin;
+    padding: 10px;
+    margin-left: 10%;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 60%;
+}
+
+.categ_cross {
+    float: right;
+    padding: 10px;
+}
+
+.noQuestion {
+    text-align: center;
+    color: firebrick;
+    margin-top: 30px;
 }
