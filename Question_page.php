@@ -9,6 +9,8 @@ $id = $_GET["id"];
     <meta charset="utf-8">
     <title>Universalitis</title>
     <link rel="stylesheet" href="Assets/css/Question_page.css">
+    <link rel="stylesheet" href="Assets/css/header.css">
+    <link rel="stylesheet" href="Assets/css/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
@@ -32,8 +34,9 @@ $id = $_GET["id"];
     <?php endforeach; ?>
     <?php
         if(empty ($_SESSION['questionList'][$id]["answers"])){?>
-            <p class="erreur">il n'y a pas encore de reponses </p>
+    <p class="erreur">il n'y a pas encore de reponses </p>
     <?php } ?>
+    <br>
     <a href="Answer_form.php?qid=<?php echo $id; ?>" class="buttonanswer">Répondre</a>
 
     <?php include 'footer.php'; ?>

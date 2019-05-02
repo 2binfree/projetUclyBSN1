@@ -42,17 +42,18 @@ header {
 }
 
 .buttonanswer{
-
     margin-left: 47.5%;
-    margin-top: 30%;
+    text-decoration: none;
     font-size: 18px;
 	font-weight: bold;
-    border-style: solid;
-    padding: 10px;
-    border-color: #FCF000;
+	border-style: solid;
+	padding: 10px;
+    border-color: dimgray;
 	border-radius: 10px;
-    border-width: thin;
-	background-color: #FCB000;
+	border-width: thin;
+	background-color: #FCB555;
+    white-space: nowrap;
+    color: black;
 }
 
 .block {
