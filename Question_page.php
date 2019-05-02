@@ -8,14 +8,14 @@ $id = $_GET["id"];
 <head>
     <meta charset="utf-8">
     <title>Universalitis</title>
-    <link rel="stylesheet" href="Assets/css/Question_form.css">
+    <link rel="stylesheet" href="Assets/css/Question_page.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body>
     <?php include 'header.php'; ?>
         <div class="quest">
-            <p class="">QUESTION:</p>
+            <p>QUESTION</p>
             <?php echo $_SESSION['questionList'][$id]["question"]?>
         </div>
             <br/>
@@ -34,8 +34,6 @@ $id = $_GET["id"];
         if(empty ($_SESSION['questionList'][$id]["answers"])){?>
             <p class="erreur">il n'y a pas encore de reponses </p>
     <?php } ?>
-    <br />
-
     <a href="Answer_form.php?qid=<?php echo $id; ?>" class="buttonanswer">Répondre</a>
 
     <?php include 'footer.php'; ?>
