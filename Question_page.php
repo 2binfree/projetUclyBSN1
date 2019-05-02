@@ -15,6 +15,7 @@ $id = $_GET["id"];
 <body>
     <?php include 'header.php'; ?>
         <div class="quest">
+            <p class="">QUESTION:</p>
             <?php echo $_SESSION['questionList'][$id]["question"]?>
         </div>
             <br/>
@@ -33,7 +34,9 @@ $id = $_GET["id"];
         if(empty ($_SESSION['questionList'][$id]["answers"])){?>
             <p class="erreur">il n'y a pas encore de reponses </p>
     <?php } ?>
-    <a href="Answer_form.php?qid=<?php echo $id; ?>" class="answer">Répondre</a>
+    <br />
+
+    <a href="Answer_form.php?qid=<?php echo $id; ?>" class="buttonanswer">Répondre</a>
 
     <?php include 'footer.php'; ?>
 
