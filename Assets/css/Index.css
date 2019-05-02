@@ -5,10 +5,14 @@ body {
 
 header {
     overflow: hidden;
-    border-color: #FCB000;
+    border-color: #FCB555;
     border-style: solid;
     border-radius: 10px;
     background-color: #F5F5F5;
+}
+
+h1 {
+    width: 100%;
 }
 
 .taskbar {
@@ -19,7 +23,7 @@ header {
 
 .Logo {
     float: left;
-    padding-left: 4%;
+    padding-left: 45%;
 }
 
 .searchbar {
@@ -35,15 +39,16 @@ header {
 }
 
 .sidebar {
+    text-align: center;
     float: left;
     overflow: hidden;
-    width: 12%;
+    width: 14%;
     z-index: 1;
     margin-top: 50px;
     margin-left: 3.5%;
     background-color: #F5F5F5;
-    padding: 20px;
-    border-color: #FCB000;
+    padding: 10px;
+    border-color: #FCB555;
     border-radius: 10px;
     border-style: solid;
     font-size: 20px;
@@ -53,18 +58,29 @@ a {
     color: Black;
 }
 
+.add_question {
+    color: dimgray;
+    width: 62.7%;
+    margin-left: 25%;
+    margin-top: 50px;
+	padding-left: 3%;
+    padding-bottom: 20px;
+    border-radius: 10px;
+	border-style: solid;
+	border-color: #FCB555;
+    background-color: #F5F5F5;
+}
+
 .block {
     width: 60%;
-    margin-left: 23%;
+    margin-left: 25%;
 	margin-top: 50px;
-    margin-right: 25%;
 	padding-left: 3%;
 	padding-right: 50px;
-	padding-top: 0px;
-    padding-bottom: 25px;
+    padding-bottom: 45px;
 	border-radius: 10px;
 	border-style: solid;
-	border-color: #FCB000;
+	border-color: #FCB555;
     background-color: #F5F5F5;
 }
 
@@ -73,7 +89,7 @@ p {
 }
 
 li {
-    border-color: #FCB000;
+    border-color: #FCB555;
     border-radius: 10px;
     border-style: solid;
     padding: 10px;
@@ -123,7 +139,7 @@ p {
 }
 
 .question {
-	border-color: #FCB000;
+	border-color: #FCB555;
 	border-radius: 10px;
 	border-style: solid;
 	padding: 10px;
@@ -132,16 +148,17 @@ p {
 }
 
 .button {
+    text-decoration: none;
+    margin-left: 40%;
     font-size: 18px;
 	font-weight: bold;
-	margin-left: 80%;
 	border-style: solid;
 	padding: 10px;
-    border-color: #FCF000;
+    border-color: dimgray;
 	border-radius: 10px;
-	margin-top: 30px;
 	border-width: thin;
-	background-color: #FCB000;
+	background-color: #FCB555;
+    white-space: nowrap;
 }
 
 .modal {
@@ -162,4 +179,64 @@ p {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+}
+
+.floot {
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.answer {
+    position: absolute;
+    left: 75%;
+    font-size: 18px;
+	font-weight: bold;
+    border-style: solid;
+    padding: 10px;
+    border-color: dimgray;
+	border-radius: 10px;
+    border-width: thin;
+	background-color: #FCB555;
+}
+
+.report {
+    background-color: #f44c1d;
+    border-color: #e2461b;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.category_button {
+    float: left;
+    background-color: #FCB555;
+    border: solid;
+    border-color: dimgray;
+	border-radius: 10px;
+    border-width: thin;
+    padding: 10px;
+    margin-left: 10%;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 60%;
+}
+
+.categ_cross {
+    float: right;
+    padding: 10px;
+}
+
+.noQuestion {
+    text-align: center;
+    color: firebrick;
+    margin-top: 30px;
 }

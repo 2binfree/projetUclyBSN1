@@ -2,66 +2,56 @@
 <?php require_once 'functions.php';
 setup();
 $mode = "";
+$isValid = true;
 if (!empty($_POST) && $_POST['formType'] == "question") {
    $result = createQuestion($_POST);
    if (saveQuestion($result) == 0) {
-       header('Location: Index.php');
+       $id = md5($result['time'] . $result['question']);
+       $destination = 'Location: Question_page.php?id='.$id;
+       header($destination);
+   } else {
+       $isValid = false;
    }
 }
 ?>
 
 <html lang="fr" dir="ltr">
+
 <head>
-   <meta charset="utf-8">
-   <title>Universalitis</title>
-   <link rel="stylesheet" href="Assets/css/Question_form.css">
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>Universalitis</title>
+    <link rel="stylesheet" href="Assets/css/Question_form.css">
+    <link rel="stylesheet" href="Assets/css/header.css">
+    <link rel="stylesheet" href="Assets/css/footer.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body>
-   <header>
-       <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
-       <div class="taskbar">
-           <a href="#"><i class="fas fa-user fa-2x icon"></i></a>
-           <a href="#"><i class="fas fa-bell fa-2x icon"></i></a>
-           <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
-       </div>
-   </header>
-   <div class="titre">
-       <p class="text">Saisir votre question</p>
-   </div>
-   <form class="" action="Question_form.php" method="post">
-       <textarea placeholder="Ecrivez votre question ici" id="myid" class="block text_user" name="question" required minlength="50" maxlength="500" size="50" wrap="hard"></textarea>
-       <input type="hidden" name="formType" value="question">
-       <input type="submit" value="Envoyer" class="button gauche" name="submit">
-       <input type="button" onclick="window.location.href = 'Index.php'" value="Annuler" class="button droite" id="Cancel">
-       <div class="categorie">
-           <h2>Choisir mots-clés :</h2>
-           <input type="radio" id="Finance" name="category" value="finance">
-           <label for="Finance">Finance</label><br>
-           <input type="radio" id="Culture" name="category" value="culture">
-           <label for="Culture">Culture</label><br>
-           <input type="radio" id="Divertissements" name="category" value="divertissements">
-           <label for="Divertissements">Divertissements</label><br>
-           <input type="radio" id="Santé" name="category" value="sante">
-           <label for="Santé">Santé</label><br>
-           <input type="radio" id="Sport" name="category" value="sport">
-           <label for="Sport">Sport</label><br>
-           <input type="radio" id="Sciences" name="category" value="science">
-           <label for="Sciences">Sciences</label><br>
-           <input type="radio" id="Technologies" name="category" value="technologie">
-           <label for="Technologies">Technologies</label><br>
-           <input type="radio" id="Mode" name="category" value="mode">
-           <label for="Mode">Mode</label><br>
-           <input type="radio" id="Cuisine" name="category" value="cuisine">
-           <label for="Cuisine">Cuisine</label><br>
-           <input type="radio" id="Bricolage" name="category" value="bricolage">
-           <label for="Bricolage">Bricolage</label><br>
-           <input type="radio" id="Voyage" name="category" value="voyage">
-           <label for="Voyage">Voyage</label><br>
-       </div>
-   </form>
-   <script src="Assets/JS/Index.js"></script>
+    <?php include 'header.php'; ?>
+    <div class="titre">
+        <p class="text">Saisir votre question</p>
+    </div>
+    <?php if ($isValid == false) {
+        ?> <p class="noQuestion">Il faut attribuer une catégorie a la question !</p>
+    <?php } ?>
+    <form class="" action="Question_form.php" method="post">
+        <div class="categorie">
+            <h2>Choisir mots-clés :</h2>
+            <?php foreach ($_SESSION['categories'] as $index => $category) { ?>
+                <div class="mot_gauche">
+                    <input type="radio" id="<?php echo $index; ?>" name="category" value="<?php echo $category; ?>">
+                    <label for="<?php echo $category ?>"><?php echo $category ?></label>
+                </div>
+            <?php }?>
+        </div>
+        <textarea placeholder="Ecrivez votre question ici" id="myid" class="text_user" name="question" required minlength="25" maxlength="500" size="50" wrap="hard" rows="10"><?php if ($isValid == false) {
+            echo $result['question'];
+        } ?></textarea>
+        <input type="hidden" name="formType" value="question">
+        <input type="submit" value="Envoyer" class="button envoyer" name="submit">
+        <input type="button" onclick="window.location.href = 'Index.php'" value="Annuler" class="button annuler" id="Cancel">
+    </form>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>
