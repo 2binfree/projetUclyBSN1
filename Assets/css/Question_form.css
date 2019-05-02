@@ -112,8 +112,8 @@ h2 {
 
 
 .answ{
-    width: 60%;
-    margin-left: 23%;
+    width: 45%;
+    margin-left: 24%;
 	margin-top: 50px;
     padding-bottom: 40px;
 	padding-left: 3%;
@@ -127,7 +127,7 @@ h2 {
 
 .quest{
     width: 48.7%;
-    margin-left: 25%;
+    margin-left: 24%;
     font-size: 22px;
     padding-top: 5px;
     text-align: center;
@@ -141,10 +141,9 @@ h2 {
     background-color: #F5F5F5;
 }
 
-.answer {
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 45%;
+.buttonanswer{
+
+    margin-right: 700%;
     font-size: 18px;
 	font-weight: bold;
     border-style: solid;
