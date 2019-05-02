@@ -13,20 +13,13 @@ $id = $_GET["id"];
 </head>
 
 <body>
-    <header>
-        <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
-        <div class="taskbar">
-            <a href="#"><i class="fas fa-user fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-bell fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
+    <?php include 'header.php'; ?>
+        <div class="quest">
+            <p class="">QUESTION:</p>
+            <?php echo $_SESSION['questionList'][$id]["question"]?>
         </div>
-    </header>
-    <div class="quest">
-        <p class="Question">Question:</p>
-        <?php echo $_SESSION['questionList'][$id]["question"]?>
-    </div>
-    <br />
-    <?php
+            <br/>
+            <?php
                 $num=0;
                 $listAnswers=$_SESSION['questionList'][$id]["answers"];
                 foreach($listAnswers as $answers): ?>
@@ -41,6 +34,10 @@ $id = $_GET["id"];
         if(empty ($_SESSION['questionList'][$id]["answers"])){?>
             <p class="erreur">il n'y a pas encore de reponses </p>
     <?php } ?>
+    <br />
+
     <a href="Answer_form.php?qid=<?php echo $id; ?>" class="buttonanswer">Répondre</a>
+
+    <?php include 'footer.php'; ?>
 
 </body>

@@ -5,11 +5,12 @@ setup();
 $listeQuestions = sortQuestion();
 $categories = $_SESSION["categories"];
 $mode = "";
-if (!empty($_POST['category'])) {
-    if (isset($categories[md5($_POST['category'])])) {
-        $mode = md5($_POST['category']);
+$currentMode = $_GET['category'];
+if (!empty($currentMode)) {
+    if (isset($categories[$currentMode])) {
+        $mode = $currentMode;
     }
-}
+};
 ?>
 <html lang="fr" dir="ltr">
 
@@ -22,37 +23,27 @@ if (!empty($_POST['category'])) {
 </head>
 
 <body>
-    <header>
-        <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
-        <div class="taskbar">
-            <i class="fas fa-search search fa-lg"><input type="text" id="myInput" onkeyup="Search()" placeholder="Recherchez" class="searchbar"></i>
-            <a href="#"><i class="fas fa-user fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-bell fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
-        </div>
-    </header>
+    <?php include 'header.php'; ?>
     <div class="sidebar">
-        <form action="Index.php" method="post">
-            <input type="submit" name="category" value="finance"><br>
-            <input type="submit" name="category" value="culture"><br>
-            <input type="submit" name="category" value="divertissement"><br>
-            <input type="submit" name="category" value="sante"><br>
-            <input type="submit" name="category" value="sport"><br>
-            <input type="submit" name="category" value="science"><br>
-            <input type="submit" name="category" value="technologie"><br>
-            <input type="submit" name="category" value="mode"><br>
-            <input type="submit" name="category" value="cuisine"><br>
-            <input type="submit" name="category" value="bricolage"><br>
-            <input type="submit" name="category" value="voyage"><br>
+        <form action="Index.php" method="get">
+            <?php
+            foreach ($categories as $index => $category) {
+                ?> <a href="Index.php?category=<?php echo $index ?>" class="category_button"><?php echo $category ?> </a> <?php
+                if (!empty($currentMode) && $currentMode == $index) {?>
+                    <a href="Index.php"><i class="fas fa-times categ_cross"></i></a><?php
+                }
+            }?>
         </form>
     </div>
 
-    <div class="ajt_question">
-        <h1>Posez votre question
+    <div class="add_question">
+        <h1>Liste des questions posées :</h1>
             <a class="button" href="Question_form.php">Ajouter ma question</a>
-        </h1>
     </div>
     <?php $keys = 0;
+        if (empty($_SESSION['questionList'])) {?>
+            <p class="noQuestion">Il n'y a aucune question pour l'instant, soyer le premier à en poser une !</p>
+        <?php }
         foreach($listeQuestions as $index=>$listeQuestion):
             $keys++;
             $answerCount = count($listeQuestion['answers']);
@@ -65,14 +56,14 @@ if (!empty($_POST['category'])) {
                     <p><b>N°<?php echo $keys; ?></b>/ <?php echo ($categories[$listeQuestion["categoryKey"]]);?></p>
 
                         <li>
-                            <?php if (strlen($listeQuestion["question"]) > 155) { 
+                            <?php if (strlen($listeQuestion["question"]) > 155) {
                                      echo $index;?>"> <?php echo substr($listeQuestion["question"], 0, 155)."..."; ?>
                                <?php  } else { ?>
-                             <?php echo ($listeQuestion["question"]);?> 
+                             <?php echo ($listeQuestion["question"]);?>
                             <?php }?>
                             </li>
                         <p><em><?php if ($answerCount <= 1) {
-                                        echo "$answerCount réponse";    
+                                        echo "$answerCount réponse";
                                 } else {
                                         echo "$answerCount réponses";
                         }?></em></p>
@@ -82,10 +73,9 @@ if (!empty($_POST['category'])) {
             </table></a>
     </ul>
     <?php endif;
-        endforeach; ?>
-    <div class="block floot">
-        <a href="mentionsLegales.php">Mentions Légales</a>
-    </div>
+        endforeach;
+    include 'footer.php'; ?>
+
 </body>
 
 </html>

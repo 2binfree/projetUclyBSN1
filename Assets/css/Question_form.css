@@ -58,7 +58,7 @@ a {
     border-style: solid;
     border-radius: 10px;
     border-color: dimgrey;
-    border-width:thin; 
+    border-width:thin;
     background-color: #FCB555;
     width: 70%;
     margin-top: 30px;
@@ -143,7 +143,8 @@ h2 {
 
 .buttonanswer{
 
-    margin-right: 700%;
+    margin-left: 47.5%;
+    margin-top: 30%;
     font-size: 18px;
 	font-weight: bold;
     border-style: solid;
