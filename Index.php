@@ -55,7 +55,7 @@ if (!empty($currentMode)) {
         foreach($listeQuestions as $index=>$listeQuestion):
             $keys++;
             $answerCount = count($listeQuestion['answers']);
-            if (empty($mode) || $listeQuestion["categoryKey"] === $mode) : ?>
+            if (empty($mode) || $listeQuestion["categoryKey"] === $mode) {?>
     <ul class="block" id="list">
         <a class="link" href="Question_page.php?id=<?php echo $index;?>">
         <table>
@@ -65,10 +65,10 @@ if (!empty($currentMode)) {
 
                         <li>
                             <?php if (strlen($listeQuestion["question"]) > 155) { 
-                                     echo $index;?>"> <?php echo substr($listeQuestion["question"], 0, 155)."..."; ?>
-                               <?php  } else { ?>
-                             <?php echo ($listeQuestion["question"]);?> 
-                            <?php }?>
+                                     echo $index;?>"> <?php echo substr($listeQuestion["question"], 0, 155)."...";
+                                } else {
+                                     echo ($listeQuestion["question"]);
+                                             }?>
                             </li>
                         <p><em><?php if ($answerCount <= 1) {
                                         echo "$answerCount réponse";    
@@ -80,7 +80,9 @@ if (!empty($currentMode)) {
             </tr>
             </table></a>
     </ul>
-    <?php endif;
+    <?php } else { ?>
+                <p class="noQuestion">Il n'y a aucune question dans cette catégorie pour l'instant !</p>
+        <?php }
         endforeach; ?>
     <div class="block floot">
         <a href="mentionsLegales.php">Mentions Légales</a>
