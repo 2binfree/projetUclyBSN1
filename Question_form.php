@@ -2,10 +2,13 @@
 <?php require_once 'functions.php';
 setup();
 $mode = "";
+$isValid = 0;
 if (!empty($_POST) && $_POST['formType'] == "question") {
    $result = createQuestion($_POST);
    if (saveQuestion($result) == 0) {
        header('Location: Index.php');
+   } else {
+       $isValid = 1;
    }
 }
 ?>
@@ -20,14 +23,7 @@ if (!empty($_POST) && $_POST['formType'] == "question") {
 </head>
 
 <body>
-    <header>
-        <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
-        <div class="taskbar">
-            <a href="#"><i class="fas fa-user fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-bell fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
-        </div>
-    </header>
+    <?php include 'header.php'; ?>
     <div class="titre">
         <p class="text">Saisir votre question</p>
     </div>
@@ -79,14 +75,14 @@ if (!empty($_POST) && $_POST['formType'] == "question") {
                 <label for="Voyage">Voyage</label>
             </div>
         </div>
-        <textarea placeholder="Ecrivez votre question ici" id="myid" class="text_user" name="question" required minlength="25" maxlength="500" size="50" wrap="hard" rows="10"></textarea>
+        <textarea placeholder="Ecrivez votre question ici" id="myid" class="text_user" name="question" required minlength="25" maxlength="500" size="50" wrap="hard" rows="10"><?php if ($isValid == 1) {
+            echo $result['question'];
+        } ?></textarea>
         <input type="hidden" name="formType" value="question">
         <input type="submit" value="Envoyer" class="button envoyer" name="submit">
         <input type="button" onclick="window.location.href = 'Index.php'" value="Annuler" class="button annuler" id="Cancel">
     </form>
-    <div class="block floot">
-        <a href="mentionsLegales.php">Mentions Légales</a>
-    </div>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

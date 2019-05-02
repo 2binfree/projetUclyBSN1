@@ -13,14 +13,7 @@ $id = $_GET["id"];
 </head>
 
 <body>
-    <header>
-        <a href="Index.php" class="Logo"><img src="Assets/Images/logo2.0.png" alt="Logo"></a>
-        <div class="taskbar">
-            <a href="#"><i class="fas fa-user fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-bell fa-2x icon"></i></a>
-            <a href="#"><i class="fas fa-home fa-2x icon salut"></i></a>
-        </div>
-    </header>
+    <?php include 'header.php'; ?>
 
         <div class="quest">
             <?php echo $_SESSION['questionList'][$id]["question"]?>
@@ -41,5 +34,6 @@ $id = $_GET["id"];
 
         <a href="Answer_form.php?qid=<?php echo $id; ?>" class="answer">Répondre</a>
 
+    <?php include 'footer.php'; ?>
 
 </body>

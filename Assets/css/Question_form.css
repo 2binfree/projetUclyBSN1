@@ -58,7 +58,7 @@ a {
     border-style: solid;
     border-radius: 10px;
     border-color: dimgrey;
-    border-width:thin; 
+    border-width:thin;
     background-color: #FCB555;
     width: 70%;
     margin-top: 30px;
@@ -141,8 +141,6 @@ h2 {
 
 .answer {
     position: absolute;
-    margin-top: 100px;
-    margin-left: 50%;
     font-size: 18px;
 	font-weight: bold;
     border-style: solid;
@@ -170,5 +168,3 @@ h2 {
     padding-top: 15px;
     padding-bottom: 15px;
 }
-
-
